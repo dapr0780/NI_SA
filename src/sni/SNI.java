@@ -16,7 +16,7 @@ public class SNI {
     public static void main(String[] args) {
         // TODO code application logic here
         FrmLogin lg=new FrmLogin();
-        lg.main(args);
+        lg.main();
         //comment
     }
     

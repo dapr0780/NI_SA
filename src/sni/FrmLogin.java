@@ -135,10 +135,11 @@ public class FrmLogin extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Usuario.setLoggeado(true);
+        Usuario.setSupersu(true);
         Usuario.setUsuario("Juanito");
         
         if(Usuario.isLoggeado()){
-            javax.swing.JOptionPane.showMessageDialog(null, "Ahhh perro te loggeaste");
+            //javax.swing.JOptionPane.showMessageDialog(null, "Ahhh perro te loggeaste");
             FrmPrincipal p=new FrmPrincipal();
             p.main();
             this.dispose();
@@ -151,7 +152,7 @@ public class FrmLogin extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

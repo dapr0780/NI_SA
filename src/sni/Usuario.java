@@ -12,7 +12,7 @@ package sni;
 public class Usuario {
     private static String usuario="";
     private static boolean loggeado=false;
-    private static boolean supersu=false;
+    private static boolean supersu=true;
 
     public static String getUsuario() {
         return usuario;
