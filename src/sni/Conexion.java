@@ -2,53 +2,32 @@ package sni;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 public class Conexion {
-
     
-    private String url = "jdbc:mysql://localhost:3306/nisa";
-    private String login = "root"; 
-    private String password = "12345";
-    private Connection cnx = null;
-    private Statement sttm = null;
-    private ResultSet rst = null;
+    Connection Conexion = null;
 
-    
-        
-    public void UID(String sql) {
+    public Connection conectar() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            cnx = DriverManager.getConnection(url, login, password);
-            sttm = cnx.createStatement();
-            sttm.executeUpdate(sql); //statement
-        } catch (ClassNotFoundException c) {
-            JOptionPane.showMessageDialog(null, "ERROR: " + c.getMessage());
-            System.exit(1); //salir de aplicación
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "ERROR DE mysql: " + e.getMessage());
-            System.exit(1);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
+        try {
+            Conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/nisa?autoReconnect=true&useSSL=false", "root", "12345");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage());
+        }
+        return Conexion;
     }
 
-    
-    public ResultSet getValores(String sql) {
+    public void desconectar() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            cnx = DriverManager.getConnection(url, login, password);
-            sttm = cnx.createStatement();
-            rst = sttm.executeQuery(sql);  //resultset
-        } catch (ClassNotFoundException c) {
-            JOptionPane.showMessageDialog(null, "ERROR: " + c.getMessage());
-            System.exit(1);
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "ERROR: " + e.getMessage());
-            System.exit(1);
-        } finally {
-            return rst;
+            Conexion.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage());
         }
     }
 
