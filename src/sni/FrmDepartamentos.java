@@ -73,7 +73,6 @@ public class FrmDepartamentos extends javax.swing.JDialog {
         lblNoDepartamento = new javax.swing.JLabel();
         txfNoDepartamento = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setModal(true);
 
         pnlDepartamentos.setBorder(javax.swing.BorderFactory.createTitledBorder("Departamentos"));

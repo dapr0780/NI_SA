@@ -20,10 +20,19 @@ public class FrmLogin extends javax.swing.JFrame {
      */
     public FrmLogin() {
         initComponents();
+        
+    }
+    
+    public void subrayarPW(){
         Font font = jLabel3.getFont();
         Map attributes = font.getAttributes();
         attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
         jLabel3.setFont(font.deriveFont(attributes));
+    }
+    
+    public void desubrayarPW(){
+        Font font = lblUsuario.getFont();
+        jLabel3.setFont(font);
     }
 
     /**
@@ -56,6 +65,12 @@ public class FrmLogin extends javax.swing.JFrame {
         jLabel3.setText("Olvidé mi contraseña");
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel3MouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jLabel3MousePressed(evt);
             }
@@ -148,6 +163,14 @@ public class FrmLogin extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
+        subrayarPW();
+    }//GEN-LAST:event_jLabel3MouseEntered
+
+    private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseExited
+        desubrayarPW();
+    }//GEN-LAST:event_jLabel3MouseExited
 
     /**
      * @param args the command line arguments
