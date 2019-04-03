@@ -8,22 +8,74 @@ package sni;
 import java.awt.Color;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author vladi
  */
 public class FrmPrincipal extends javax.swing.JFrame {
+    Tablas tabla = new Tablas();
+    QPersonas qPersonas = new QPersonas();
 
     /**
      * Creates new form Principal
      */
     public FrmPrincipal() {
         initComponents();
+        actualizarTblBuscar();
         if(!Usuario.isSupersu()){
             initUsuario();
         }else{
             initSuperUsuario();
+        }
+    }
+    
+    public void actualizarTblBuscar(){
+        tblDatosBuscar.setModel(llenarTblBuscar());
+        tabla.resizeColumnWidth(tblDatosBuscar);
+    }
+    
+    public DefaultTableModel llenarTblBuscar(){
+        List<Personas> personas = new ArrayList<Personas>();
+        DefaultTableModel dtmModelo = new DefaultTableModel();
+        
+        dtmModelo.addColumn("DUI");
+        dtmModelo.addColumn("Nombres");
+        dtmModelo.addColumn("Apellidos");
+        dtmModelo.addColumn("Teléfono");
+        dtmModelo.addColumn("Dirección");
+        dtmModelo.addColumn("Correo");
+        dtmModelo.addColumn("Foto");
+        dtmModelo.addColumn("Nivel Académico");
+        dtmModelo.addColumn("Facebook");
+        
+        personas = qPersonas.mostrarPersonas();
+        
+        int i=0;
+        for(Personas per:personas){
+            dtmModelo.addRow(new Object[]{});
+            dtmModelo.setValueAt(per.getDui(),i,0);
+            dtmModelo.setValueAt(evaluarNulo(per.getNombre()),i,1);
+            dtmModelo.setValueAt(evaluarNulo(per.getApellido()),i,2);
+            dtmModelo.setValueAt(evaluarNulo(per.getTelefono()),i,3);
+            dtmModelo.setValueAt(evaluarNulo(per.getDireccion()),i,4);
+            dtmModelo.setValueAt(evaluarNulo(per.getCorreo()),i,5);
+            dtmModelo.setValueAt(evaluarNulo(per.getFoto()),i,6);
+            dtmModelo.setValueAt(evaluarNulo(per.getNivelAcademico()),i,7);
+            dtmModelo.setValueAt(evaluarNulo(per.getFacebook()),i,8);
+            i++;
+        }
+        return dtmModelo;
+    }
+    
+    public String evaluarNulo(String dato){
+        if(dato==null){
+            return "n/a";
+        }else{
+            return dato;
         }
     }
     
@@ -180,13 +232,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
         mnuAyuda = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(720, 480));
 
         tbpPrincipal.setPreferredSize(new java.awt.Dimension(720, 480));
 
         pnlFiltrarDatosBuscar.setBorder(javax.swing.BorderFactory.createTitledBorder("Filtrar datos"));
 
-        cmbFiltrarDatosBuscar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbFiltrarDatosBuscar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DUI", "Nombre", "Apellido", "Teléfono", "Dirección", "Correo", "Nivel Académico" }));
 
         btnAplicarFiltroBuscar.setText("Aplicar filtro");
 
