@@ -86,7 +86,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="tbpPrincipal" pref="410" max="32767" attributes="0"/>
+              <Component id="tbpPrincipal" pref="448" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -131,7 +131,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnlFiltrarDatosBuscar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="scpnlDatosBuscar" pref="213" max="32767" attributes="0"/>
+                      <Component id="scpnlDatosBuscar" pref="251" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnlControlBuscar" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -362,7 +362,7 @@
                           <Component id="pnlFotoTW" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scpnlTW" pref="109" max="32767" attributes="0"/>
+                      <Component id="scpnlTW" pref="147" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnGuardarTW" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -563,7 +563,7 @@
                           <Component id="pnlFotoAfiliados" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scpnlAfiliados" pref="109" max="32767" attributes="0"/>
+                      <Component id="scpnlAfiliados" pref="147" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnGuardarAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -764,7 +764,7 @@
                           <Component id="pnlFotoCapacitaciones" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scpanelCapacitaciones" pref="109" max="32767" attributes="0"/>
+                      <Component id="scpanelCapacitaciones" pref="147" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnGuardarCapacitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -965,7 +965,7 @@
                           <Component id="pnlFotoComisiones" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scpnlComisiones" pref="109" max="32767" attributes="0"/>
+                      <Component id="scpnlComisiones" pref="147" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnGuardarComisiones" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1135,7 +1135,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="382" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="420" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1157,7 +1157,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="382" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="420" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1210,7 +1210,7 @@
                           <Component id="pnlFotoVisitas" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scpnlVisitas" pref="109" max="32767" attributes="0"/>
+                      <Component id="scpnlVisitas" pref="147" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnGuardarVisitas" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1392,7 +1392,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnlFiltrarDatosFacturacion" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="scpnlDatosFacturacion" pref="213" max="32767" attributes="0"/>
+                      <Component id="scpnlDatosFacturacion" pref="251" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnlControlFacturacion" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -1732,6 +1732,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Municipios"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMunicipiosActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnNivelesAcad">
                   <Properties>
