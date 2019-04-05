@@ -317,8 +317,8 @@
         <Container class="javax.swing.JPanel" name="pnlEquipoTrabajo">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Equipo de Trabajo">
-                <Property name="tabTitle" type="java.lang.String" value="Equipo de Trabajo"/>
+              <JTabbedPaneConstraints tabName="Miembro Electoral">
+                <Property name="tabTitle" type="java.lang.String" value="Miembro Electoral"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -329,22 +329,22 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scpnlTW" alignment="0" max="32767" attributes="0"/>
+                          <Component id="scpnlEM" alignment="0" max="32767" attributes="0"/>
                           <Component id="pnlBuscarTW" alignment="1" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="btnAgregarTW" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnAgregarEM" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnEditarTW" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnEditarEM" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnGuardarTW" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnGuardarEM" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="btnImprimirTW" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnImprimirEM" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="pnlFotoTW" min="-2" max="-2" attributes="0"/>
+                              <Component id="pnlFotoEM" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="pnlDatosTW" max="32767" attributes="0"/>
+                              <Component id="pnlDatosEM" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -358,17 +358,17 @@
                       <Component id="pnlBuscarTW" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="pnlDatosTW" alignment="0" max="32767" attributes="0"/>
-                          <Component id="pnlFotoTW" alignment="0" max="32767" attributes="0"/>
+                          <Component id="pnlDatosEM" alignment="0" max="32767" attributes="0"/>
+                          <Component id="pnlFotoEM" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scpnlTW" pref="147" max="32767" attributes="0"/>
+                      <Component id="scpnlEM" pref="147" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnGuardarTW" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnEditarTW" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnAgregarTW" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnImprimirTW" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnGuardarEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnEditarEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAgregarEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnImprimirEM" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -390,11 +390,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblFiltrarTW" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblFiltrarEM" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="txfFiltrarTW" min="-2" pref="220" max="-2" attributes="0"/>
+                          <Component id="txfFiltrarEM" min="-2" pref="220" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="btnBuscarTW" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnBuscarEM" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="316" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -404,9 +404,9 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblFiltrarTW" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfFiltrarTW" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnBuscarTW" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblFiltrarEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfFiltrarEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnBuscarEM" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -414,21 +414,21 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="lblFiltrarTW">
+                <Component class="javax.swing.JLabel" name="lblFiltrarEM">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Filtrar:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txfFiltrarTW">
+                <Component class="javax.swing.JTextField" name="txfFiltrarEM">
                 </Component>
-                <Component class="javax.swing.JButton" name="btnBuscarTW">
+                <Component class="javax.swing.JButton" name="btnBuscarEM">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Buscar"/>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="pnlFotoTW">
+            <Container class="javax.swing.JPanel" name="pnlFotoEM">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
@@ -453,7 +453,7 @@
                 </DimensionLayout>
               </Layout>
             </Container>
-            <Container class="javax.swing.JPanel" name="pnlDatosTW">
+            <Container class="javax.swing.JPanel" name="pnlDatosEM">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -475,11 +475,11 @@
                 </DimensionLayout>
               </Layout>
             </Container>
-            <Container class="javax.swing.JScrollPane" name="scpnlTW">
+            <Container class="javax.swing.JScrollPane" name="scpnlEM">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tblTW">
+                <Component class="javax.swing.JTable" name="tblEM">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
@@ -493,22 +493,22 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="btnAgregarTW">
+            <Component class="javax.swing.JButton" name="btnAgregarEM">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Agregar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnEditarTW">
+            <Component class="javax.swing.JButton" name="btnEditarEM">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnGuardarTW">
+            <Component class="javax.swing.JButton" name="btnGuardarEM">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Guardar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnImprimirTW">
+            <Component class="javax.swing.JButton" name="btnImprimirEM">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Imprimir"/>
               </Properties>

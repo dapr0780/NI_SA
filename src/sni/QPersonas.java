@@ -95,47 +95,13 @@ public class QPersonas {
         }
     }
     
-    public List<Municipios> mostrarMunicipiosDepto(){
-        List<Municipios> listaMunicipios = new ArrayList<Municipios>();
-        try{
-            Statement sentencia = null;
-            ResultSet resultado = null;
-            sentencia = con.conectar().createStatement();
-            resultado = sentencia.executeQuery(
-                    "SELECT idMunicipio, municipio, departamento.departamento "
-                            + "FROM municipio "
-                            + "INNER JOIN departamento "
-                            + "ON municipio.departamento=departamento.iddepartamento;");
-            resultado.last();
-            
-            if(resultado.getRow()<=0){
-                listaMunicipios.clear();
-                return listaMunicipios;
-            }else{
-                resultado.beforeFirst();
-                while(resultado.next()){
-                    int id = (Integer) resultado.getObject("idMunicipio");
-                    String municipio = resultado.getObject("municipio").toString();
-                    String departamento = resultado.getObject("departamento").toString();
-                    Municipios mn = new Municipios(id,departamento,municipio);
-                    listaMunicipios.add(mn);
-                }
-            }
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        } finally{
-            con.desconectar();
-        }
-        return listaMunicipios;
-    }
-    
-    public boolean modificarMunicipio(int idActual, int idNuevo, String departamento, String municipio){
+    public boolean modificarPersona(int dui){
         try {
             int rows_updated = 0;
-            PreparedStatement stmt1 = con.conectar().prepareStatement("UPDATE municipio SET idMunicipio=?, departamento = (SELECT idDepartamento FROM departamento WHERE departamento=?), municipio=? WHERE (idMunicipio = " + idActual + ")");
-            stmt1.setInt(1, idNuevo);
-            stmt1.setString(2, departamento);
-            stmt1.setString(3, municipio);
+            PreparedStatement stmt1 = con.conectar().prepareStatement("UPDATE municipio SET idMunicipio=?, departamento = (SELECT idDepartamento FROM departamento WHERE departamento=?), municipio=? WHERE (idMunicipio = " + 0 + ")");
+            //stmt1.setInt(1, idNuevo);
+            //stmt1.setString(2, departamento);
+            //stmt1.setString(3, municipio);
 
             rows_updated = stmt1.executeUpdate();
             if (rows_updated == 1) {
@@ -153,10 +119,10 @@ public class QPersonas {
         }
     }
     
-    public boolean eliminarMunicipio(int id){
+    public boolean eliminarMunicipio(int dui){
         try {
             int rows_updated = 0;
-            PreparedStatement stmt1 = con.conectar().prepareStatement("DELETE FROM municipio where idMunicipio= " + id);
+            PreparedStatement stmt1 = con.conectar().prepareStatement("DELETE FROM persona where dui= " + dui);
             rows_updated = stmt1.executeUpdate();
             if (rows_updated == 1) {
                 return true;

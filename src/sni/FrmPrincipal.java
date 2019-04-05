@@ -129,17 +129,17 @@ public class FrmPrincipal extends javax.swing.JFrame {
         lblFiltrosBuscar = new javax.swing.JLabel();
         pnlEquipoTrabajo = new javax.swing.JPanel();
         pnlBuscarTW = new javax.swing.JPanel();
-        lblFiltrarTW = new javax.swing.JLabel();
-        txfFiltrarTW = new javax.swing.JTextField();
-        btnBuscarTW = new javax.swing.JButton();
-        pnlFotoTW = new javax.swing.JPanel();
-        pnlDatosTW = new javax.swing.JPanel();
-        scpnlTW = new javax.swing.JScrollPane();
-        tblTW = new javax.swing.JTable();
-        btnAgregarTW = new javax.swing.JButton();
-        btnEditarTW = new javax.swing.JButton();
-        btnGuardarTW = new javax.swing.JButton();
-        btnImprimirTW = new javax.swing.JButton();
+        lblFiltrarEM = new javax.swing.JLabel();
+        txfFiltrarEM = new javax.swing.JTextField();
+        btnBuscarEM = new javax.swing.JButton();
+        pnlFotoEM = new javax.swing.JPanel();
+        pnlDatosEM = new javax.swing.JPanel();
+        scpnlEM = new javax.swing.JScrollPane();
+        tblEM = new javax.swing.JTable();
+        btnAgregarEM = new javax.swing.JButton();
+        btnEditarEM = new javax.swing.JButton();
+        btnGuardarEM = new javax.swing.JButton();
+        btnImprimirEM = new javax.swing.JButton();
         pnlAfiliados = new javax.swing.JPanel();
         pnlBuscarAfiliado = new javax.swing.JPanel();
         lblFiltrarAiliados = new javax.swing.JLabel();
@@ -362,9 +362,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         pnlBuscarTW.setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar"));
 
-        lblFiltrarTW.setText("Filtrar:");
+        lblFiltrarEM.setText("Filtrar:");
 
-        btnBuscarTW.setText("Buscar");
+        btnBuscarEM.setText("Buscar");
 
         javax.swing.GroupLayout pnlBuscarTWLayout = new javax.swing.GroupLayout(pnlBuscarTW);
         pnlBuscarTW.setLayout(pnlBuscarTWLayout);
@@ -372,11 +372,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
             pnlBuscarTWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlBuscarTWLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblFiltrarTW)
+                .addComponent(lblFiltrarEM)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txfFiltrarTW, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txfFiltrarEM, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnBuscarTW)
+                .addComponent(btnBuscarEM)
                 .addContainerGap(316, Short.MAX_VALUE))
         );
         pnlBuscarTWLayout.setVerticalGroup(
@@ -384,40 +384,40 @@ public class FrmPrincipal extends javax.swing.JFrame {
             .addGroup(pnlBuscarTWLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlBuscarTWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblFiltrarTW)
-                    .addComponent(txfFiltrarTW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBuscarTW))
+                    .addComponent(lblFiltrarEM)
+                    .addComponent(txfFiltrarEM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscarEM))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pnlFotoTW.setBackground(new java.awt.Color(51, 51, 255));
-        pnlFotoTW.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pnlFotoEM.setBackground(new java.awt.Color(51, 51, 255));
+        pnlFotoEM.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        javax.swing.GroupLayout pnlFotoTWLayout = new javax.swing.GroupLayout(pnlFotoTW);
-        pnlFotoTW.setLayout(pnlFotoTWLayout);
-        pnlFotoTWLayout.setHorizontalGroup(
-            pnlFotoTWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlFotoEMLayout = new javax.swing.GroupLayout(pnlFotoEM);
+        pnlFotoEM.setLayout(pnlFotoEMLayout);
+        pnlFotoEMLayout.setHorizontalGroup(
+            pnlFotoEMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 118, Short.MAX_VALUE)
         );
-        pnlFotoTWLayout.setVerticalGroup(
-            pnlFotoTWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlFotoEMLayout.setVerticalGroup(
+            pnlFotoEMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        pnlDatosTW.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos"));
+        pnlDatosEM.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos"));
 
-        javax.swing.GroupLayout pnlDatosTWLayout = new javax.swing.GroupLayout(pnlDatosTW);
-        pnlDatosTW.setLayout(pnlDatosTWLayout);
-        pnlDatosTWLayout.setHorizontalGroup(
-            pnlDatosTWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlDatosEMLayout = new javax.swing.GroupLayout(pnlDatosEM);
+        pnlDatosEM.setLayout(pnlDatosEMLayout);
+        pnlDatosEMLayout.setHorizontalGroup(
+            pnlDatosEMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        pnlDatosTWLayout.setVerticalGroup(
-            pnlDatosTWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlDatosEMLayout.setVerticalGroup(
+            pnlDatosEMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 97, Short.MAX_VALUE)
         );
 
-        tblTW.setModel(new javax.swing.table.DefaultTableModel(
+        tblEM.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -428,15 +428,15 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        scpnlTW.setViewportView(tblTW);
+        scpnlEM.setViewportView(tblEM);
 
-        btnAgregarTW.setText("Agregar");
+        btnAgregarEM.setText("Agregar");
 
-        btnEditarTW.setText("Editar");
+        btnEditarEM.setText("Editar");
 
-        btnGuardarTW.setText("Guardar");
+        btnGuardarEM.setText("Guardar");
 
-        btnImprimirTW.setText("Imprimir");
+        btnImprimirEM.setText("Imprimir");
 
         javax.swing.GroupLayout pnlEquipoTrabajoLayout = new javax.swing.GroupLayout(pnlEquipoTrabajo);
         pnlEquipoTrabajo.setLayout(pnlEquipoTrabajoLayout);
@@ -445,21 +445,21 @@ public class FrmPrincipal extends javax.swing.JFrame {
             .addGroup(pnlEquipoTrabajoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlEquipoTrabajoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scpnlTW)
+                    .addComponent(scpnlEM)
                     .addComponent(pnlBuscarTW, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnlEquipoTrabajoLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnAgregarTW)
+                        .addComponent(btnAgregarEM)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnEditarTW)
+                        .addComponent(btnEditarEM)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnGuardarTW)
+                        .addComponent(btnGuardarEM)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnImprimirTW))
+                        .addComponent(btnImprimirEM))
                     .addGroup(pnlEquipoTrabajoLayout.createSequentialGroup()
-                        .addComponent(pnlFotoTW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pnlFotoEM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(pnlDatosTW, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(pnlDatosEM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         pnlEquipoTrabajoLayout.setVerticalGroup(
@@ -469,20 +469,20 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 .addComponent(pnlBuscarTW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlEquipoTrabajoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnlDatosTW, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlFotoTW, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(pnlDatosEM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlFotoEM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(scpnlTW, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                .addComponent(scpnlEM, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlEquipoTrabajoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGuardarTW)
-                    .addComponent(btnEditarTW)
-                    .addComponent(btnAgregarTW)
-                    .addComponent(btnImprimirTW))
+                    .addComponent(btnGuardarEM)
+                    .addComponent(btnEditarEM)
+                    .addComponent(btnAgregarEM)
+                    .addComponent(btnImprimirEM))
                 .addContainerGap())
         );
 
-        tbpPrincipal.addTab("Equipo de Trabajo", pnlEquipoTrabajo);
+        tbpPrincipal.addTab("Miembro Electoral", pnlEquipoTrabajo);
 
         pnlBuscarAfiliado.setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar"));
 
@@ -1371,14 +1371,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregarAfiliados;
     private javax.swing.JButton btnAgregarCapacitaciones;
     private javax.swing.JButton btnAgregarComisiones;
-    private javax.swing.JButton btnAgregarTW;
+    private javax.swing.JButton btnAgregarEM;
     private javax.swing.JButton btnAgregarVisitas;
     private javax.swing.JButton btnAplicarFiltroBuscar;
     private javax.swing.JButton btnAplicarFiltroFacturacion;
     private javax.swing.JButton btnBuscarAfiliados;
     private javax.swing.JButton btnBuscarCapacitaciones;
     private javax.swing.JButton btnBuscarComisiones;
-    private javax.swing.JButton btnBuscarTW;
+    private javax.swing.JButton btnBuscarEM;
     private javax.swing.JButton btnBuscarVisitas;
     private javax.swing.JButton btnCargoCom;
     private javax.swing.JButton btnCargosME;
@@ -1388,21 +1388,21 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnEditarAfiliados;
     private javax.swing.JButton btnEditarCapacitaciones;
     private javax.swing.JButton btnEditarComisiones;
-    private javax.swing.JButton btnEditarTW;
+    private javax.swing.JButton btnEditarEM;
     private javax.swing.JButton btnEditarVisitas;
     private javax.swing.JButton btnGuardarAfiliados;
     private javax.swing.JButton btnGuardarBuscar;
     private javax.swing.JButton btnGuardarCapacitaciones;
     private javax.swing.JButton btnGuardarComisiones;
+    private javax.swing.JButton btnGuardarEM;
     private javax.swing.JButton btnGuardarFacturacion;
-    private javax.swing.JButton btnGuardarTW;
     private javax.swing.JButton btnGuardarVisitas;
     private javax.swing.JButton btnImprimirAfiliados;
     private javax.swing.JButton btnImprimirBuscar;
     private javax.swing.JButton btnImprimirCapacitaciones;
     private javax.swing.JButton btnImprimirComisiones;
+    private javax.swing.JButton btnImprimirEM;
     private javax.swing.JButton btnImprimirFacturacion;
-    private javax.swing.JButton btnImprimirTW;
     private javax.swing.JButton btnImprimirVisitas;
     private javax.swing.JButton btnJRV;
     private javax.swing.JButton btnLimpiarFiltroFacturacion;
@@ -1420,7 +1420,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lblFiltrarAiliados;
     private javax.swing.JLabel lblFiltrarCapacitaciones;
     private javax.swing.JLabel lblFiltrarComisiones;
-    private javax.swing.JLabel lblFiltrarTW;
+    private javax.swing.JLabel lblFiltrarEM;
     private javax.swing.JLabel lblFiltrarVisitas;
     private javax.swing.JLabel lblFiltrosAplicadosBuscar;
     private javax.swing.JLabel lblFiltrosAplicadosFacturacion;
@@ -1450,7 +1450,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel pnlDatosAfiliado;
     private javax.swing.JPanel pnlDatosCapacitaciones;
     private javax.swing.JPanel pnlDatosComisiones;
-    private javax.swing.JPanel pnlDatosTW;
+    private javax.swing.JPanel pnlDatosEM;
     private javax.swing.JPanel pnlDatosVisitas;
     private javax.swing.JPanel pnlDescripcion;
     private javax.swing.JPanel pnlEquipoTrabajo;
@@ -1460,7 +1460,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel pnlFotoAfiliados;
     private javax.swing.JPanel pnlFotoCapacitaciones;
     private javax.swing.JPanel pnlFotoComisiones;
-    private javax.swing.JPanel pnlFotoTW;
+    private javax.swing.JPanel pnlFotoEM;
     private javax.swing.JPanel pnlFotoVisitas;
     private javax.swing.JPanel pnlVisitas;
     private javax.swing.JPanel pnlVotaciones;
@@ -1469,21 +1469,21 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane scpnlComisiones;
     private javax.swing.JScrollPane scpnlDatosBuscar;
     private javax.swing.JScrollPane scpnlDatosFacturacion;
-    private javax.swing.JScrollPane scpnlTW;
+    private javax.swing.JScrollPane scpnlEM;
     private javax.swing.JScrollPane scpnlVisitas;
     private javax.swing.JTable tblAfiliados;
     private javax.swing.JTable tblCapacitaciones;
     private javax.swing.JTable tblComisiones;
     private javax.swing.JTable tblDatosBuscar;
     private javax.swing.JTable tblDatosFacturacion;
-    private javax.swing.JTable tblTW;
+    private javax.swing.JTable tblEM;
     private javax.swing.JTable tblVisitas;
     private javax.swing.JTabbedPane tbpPrincipal;
     private javax.swing.JTextField txfFiltrarAfiliados;
     private javax.swing.JTextField txfFiltrarBuscar;
     private javax.swing.JTextField txfFiltrarComisiones;
+    private javax.swing.JTextField txfFiltrarEM;
     private javax.swing.JTextField txfFiltrarFacturacion;
-    private javax.swing.JTextField txfFiltrarTW;
     private javax.swing.JTextField txfFiltrarVisitas;
     private javax.swing.JTextField txfFltrarCapacitaciones;
     // End of variables declaration//GEN-END:variables
