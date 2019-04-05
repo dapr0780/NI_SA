@@ -119,7 +119,7 @@ public class QPersonas {
         }
     }
     
-    public boolean eliminarMunicipio(int dui){
+    public boolean eliminarPersona(int dui){
         try {
             int rows_updated = 0;
             PreparedStatement stmt1 = con.conectar().prepareStatement("DELETE FROM persona where dui= " + dui);
