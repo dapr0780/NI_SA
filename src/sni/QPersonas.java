@@ -20,7 +20,6 @@ import javax.swing.JOptionPane;
  */
 public class QPersonas {
     private Conexion con= new Conexion();
-    public Municipios mun=new Municipios();
     
     public boolean agregarPersona(int idPersona, String nombre, String apellido, String telefono, String direccion, String correo, String foto, int nivelAcademico, String facebook){
         try{
