@@ -58,14 +58,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
         for(Personas per:personas){
             dtmModelo.addRow(new Object[]{});
             dtmModelo.setValueAt(per.getDui(),i,0);
-            dtmModelo.setValueAt(evaluarNulo(per.getNombre()),i,1);
-            dtmModelo.setValueAt(evaluarNulo(per.getApellido()),i,2);
-            dtmModelo.setValueAt(evaluarNulo(per.getTelefono()),i,3);
-            dtmModelo.setValueAt(evaluarNulo(per.getDireccion()),i,4);
-            dtmModelo.setValueAt(evaluarNulo(per.getCorreo()),i,5);
-            dtmModelo.setValueAt(evaluarNulo(per.getFoto()),i,6);
-            dtmModelo.setValueAt(evaluarNulo(per.getNivelAcademico()),i,7);
-            dtmModelo.setValueAt(evaluarNulo(per.getFacebook()),i,8);
+            dtmModelo.setValueAt(per.getNombre(),i,1);
+            dtmModelo.setValueAt(per.getApellido(),i,2);
+            dtmModelo.setValueAt(per.getTelefono(),i,3);
+            dtmModelo.setValueAt(per.getDireccion(),i,4);
+            dtmModelo.setValueAt(per.getCorreo(),i,5);
+            dtmModelo.setValueAt(per.getFoto(),i,6);
+            dtmModelo.setValueAt(per.getNivelAcademico(),i,7);
+            dtmModelo.setValueAt(per.getFacebook(),i,8);
             i++;
         }
         return dtmModelo;
@@ -88,6 +88,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     
     public void initSuperUsuario(){
         setDescripcionGnral();
+        actualizarTblEM();
     }
     
     public void setDescripcionGnral(){
