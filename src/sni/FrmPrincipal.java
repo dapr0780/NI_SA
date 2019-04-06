@@ -88,7 +88,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     
     public void initSuperUsuario(){
         setDescripcionGnral();
-        actualizarTblEM();
+        //actualizarTblEM();
     }
     
     public void setDescripcionGnral(){
