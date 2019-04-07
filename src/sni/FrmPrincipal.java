@@ -19,6 +19,7 @@ import javax.swing.table.DefaultTableModel;
 public class FrmPrincipal extends javax.swing.JFrame {
     Tablas tabla = new Tablas();
     QPersonas qPersonas = new QPersonas();
+    QMiembroElectoral qMiembroElectoral = new QMiembroElectoral();
 
     /**
      * Creates new form Principal
@@ -33,9 +34,58 @@ public class FrmPrincipal extends javax.swing.JFrame {
         }
     }
     
+    public void initUsuario(){
+        for(int i=1;i<10;i++){
+            tbpPrincipal.setEnabledAt(i, false);
+        }
+        tbpPrincipal.setSelectedIndex(0);
+    }
+    
+    public void initSuperUsuario(){
+        setDescripcionGnral();
+        actualizarTblEM();
+    }
+    
     public void actualizarTblBuscar(){
         tblDatosBuscar.setModel(llenarTblBuscar());
         tabla.resizeColumnWidth(tblDatosBuscar);
+    }
+    
+    public void actualizarTblEM(){
+        tblEM.setModel(llenarTblEM());
+        tabla.resizeColumnWidth(tblEM);
+    }
+    
+    public DefaultTableModel llenarTblEM(){
+        List<MiembroElectoral> miembros = new ArrayList<MiembroElectoral>();
+        DefaultTableModel dtmModelo = new DefaultTableModel();
+        
+        dtmModelo.addColumn("DUI");
+        dtmModelo.addColumn("Nombres");
+        dtmModelo.addColumn("Apellidos");
+        dtmModelo.addColumn("JRV");
+        dtmModelo.addColumn("Cargo");
+        dtmModelo.addColumn("Centro de votación");
+        dtmModelo.addColumn("Lugar de Capacitacion");
+        dtmModelo.addColumn("Fecha de capacitación");
+        
+        miembros = qMiembroElectoral.mostrarMiembros();
+        
+        int i=0;
+        for(MiembroElectoral me:miembros){
+            dtmModelo.addRow(new Object[]{});
+            dtmModelo.setValueAt(me.getDui(),i,0);
+            dtmModelo.setValueAt(me.getNombre(),i,1);
+            dtmModelo.setValueAt(me.getApellido(),i,2);
+            dtmModelo.setValueAt(me.getJrv(),i,3);
+            dtmModelo.setValueAt(me.getCargo(),i,4);
+            dtmModelo.setValueAt(me.getCentroVotacion(),i,5);
+            dtmModelo.setValueAt(me.getLugarCapacitacion(),i,6);
+            dtmModelo.setValueAt(me.getFechaCapacitacion(),i,7);
+            i++;
+        }
+        
+        return dtmModelo;
     }
     
     public DefaultTableModel llenarTblBuscar(){
@@ -77,18 +127,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         }else{
             return dato;
         }
-    }
-    
-    public void initUsuario(){
-        for(int i=1;i<10;i++){
-            tbpPrincipal.setEnabledAt(i, false);
-        }
-        tbpPrincipal.setSelectedIndex(0);
-    }
-    
-    public void initSuperUsuario(){
-        setDescripcionGnral();
-        //actualizarTblEM();
     }
     
     public void setDescripcionGnral(){

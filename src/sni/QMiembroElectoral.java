@@ -47,7 +47,7 @@ public class QMiembroElectoral {
         }
     }
     
-    public List<MiembroElectoral> mostrarPersonas(){
+    public List<MiembroElectoral> mostrarMiembros(){
         List<MiembroElectoral> listaMiembrosElec = new ArrayList<MiembroElectoral>();
         try{
             Statement sentencia = null;
@@ -82,23 +82,23 @@ public class QMiembroElectoral {
                     int dui = (Integer) resultado.getObject(1);
                     String nombre = resultado.getObject(2).toString(); 
                     String apellido = resultado.getObject(3).toString();
-                    String telefono = evaluarStringNulo(resultado.getObject(4).toString());
-                    String direccion = evaluarStringNulo(resultado.getObject(5).toString());
-                    String correo = evaluarStringNulo(resultado.getObject(6).toString());
+                    String telefono = evaluarStringNulo(resultado.getObject(4));
+                    String direccion = evaluarStringNulo(resultado.getObject(5));
+                    String correo = evaluarStringNulo(resultado.getObject(6));
                     int jrv = (Integer)resultado.getObject(7);
-                    String cargo = evaluarStringNulo(resultado.getObject(8).toString());
-                    String centroVotacion = evaluarStringNulo(resultado.getObject(9).toString());
-                    String dirCentroVot = evaluarStringNulo(resultado.getObject(10).toString());
-                    String departamentoVot = evaluarStringNulo(resultado.getObject(11).toString());
-                    String municipioVot = evaluarStringNulo(resultado.getObject(12).toString());
-                    Date fechaRegistro = Date.valueOf(evaluarStringNulo(resultado.getObject(13).toString()));
+                    String cargo = evaluarStringNulo(resultado.getObject(8));
+                    String centroVotacion = evaluarStringNulo(resultado.getObject(9));
+                    String dirCentroVot = evaluarStringNulo(resultado.getObject(10));
+                    String departamentoVot = evaluarStringNulo(resultado.getObject(11));
+                    String municipioVot = evaluarStringNulo(resultado.getObject(12));
+                    Date fechaRegistro = Date.valueOf(evaluarStringNulo(resultado.getObject(13)));
                     String lugarCapacitacion = resultado.getObject(14).toString();
                     String dirCentroCap = resultado.getObject(15).toString();
                     String departamentoCap = resultado.getObject(16).toString();
                     String municipioCap = resultado.getObject(17).toString();
                     Date fechaCapacitacion = Date.valueOf(resultado.getObject(18).toString());
-                    String foto = evaluarStringNulo(resultado.getObject(19).toString());
-                    MiembroElectoral me = new MiembroElectoral();
+                    String foto = evaluarStringNulo(resultado.getObject(19));
+                    MiembroElectoral me = new MiembroElectoral(dui, nombre, apellido, telefono, direccion, correo, jrv, cargo, centroVotacion, dirCentroVot, departamentoVot, municipioVot, fechaRegistro, lugarCapacitacion, dirCentroCap, departamentoCap, municipioCap, fechaCapacitacion, foto);
                     listaMiembrosElec.add(me);
                 }
             }
