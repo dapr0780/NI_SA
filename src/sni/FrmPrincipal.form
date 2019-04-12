@@ -75,7 +75,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="tbpPrincipal" pref="700" max="32767" attributes="0"/>
+              <Component id="tbpPrincipal" pref="795" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -83,7 +83,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="tbpPrincipal" pref="448" max="32767" attributes="0"/>
+              <Component id="tbpPrincipal" pref="528" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -114,7 +114,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scpnlDatosBuscar" alignment="1" pref="675" max="32767" attributes="0"/>
+                          <Component id="scpnlDatosBuscar" alignment="1" pref="770" max="32767" attributes="0"/>
                           <Component id="pnlFiltrarDatosBuscar" alignment="1" max="32767" attributes="0"/>
                           <Component id="pnlControlBuscar" alignment="0" max="32767" attributes="0"/>
                       </Group>
@@ -128,7 +128,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnlFiltrarDatosBuscar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="scpnlDatosBuscar" pref="251" max="32767" attributes="0"/>
+                      <Component id="scpnlDatosBuscar" pref="331" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnlControlBuscar" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -317,8 +317,8 @@
         <Container class="javax.swing.JPanel" name="pnlEquipoTrabajo">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Miembro Electoral">
-                <Property name="tabTitle" type="java.lang.String" value="Miembro Electoral"/>
+              <JTabbedPaneConstraints tabName="Miembros Electorales">
+                <Property name="tabTitle" type="java.lang.String" value="Miembros Electorales"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -329,22 +329,24 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scpnlEM" alignment="0" max="32767" attributes="0"/>
+                          <Component id="scpnlEM" alignment="0" pref="770" max="32767" attributes="0"/>
                           <Component id="pnlBuscarTW" alignment="1" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="btnAgregarEM" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnEditarEM" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnGuardarEM" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="btnImprimirEM" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Component id="pnlFotoEM" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="pnlDatosEM" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="btnAgregarEM" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnEliminarEM" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnGuardarEM" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="btnImprimirEM" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="pnlDatosEM" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -357,16 +359,16 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnlBuscarTW" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="pnlDatosEM" alignment="0" max="32767" attributes="0"/>
-                          <Component id="pnlFotoEM" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="pnlDatosEM" min="-2" max="-2" attributes="0"/>
+                          <Component id="pnlFotoEM" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scpnlEM" pref="147" max="32767" attributes="0"/>
+                      <Component id="scpnlEM" pref="175" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnGuardarEM" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnEditarEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnEliminarEM" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAgregarEM" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnImprimirEM" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -392,10 +394,12 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lblFiltrarEM" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="txfFiltrarEM" min="-2" pref="220" max="-2" attributes="0"/>
+                          <Component id="txfFiltrarEM" min="-2" pref="298" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="cmbFiltrarEM" min="-2" pref="140" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btnBuscarEM" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="316" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -407,6 +411,7 @@
                               <Component id="lblFiltrarEM" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txfFiltrarEM" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnBuscarEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cmbFiltrarEM" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -426,6 +431,25 @@
                     <Property name="text" type="java.lang.String" value="Buscar"/>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JComboBox" name="cmbFiltrarEM">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="8">
+                        <StringItem index="0" value="--Seleccione filtro--"/>
+                        <StringItem index="1" value="DUI"/>
+                        <StringItem index="2" value="Nombre"/>
+                        <StringItem index="3" value="Apellido"/>
+                        <StringItem index="4" value="JRV"/>
+                        <StringItem index="5" value="Cargo"/>
+                        <StringItem index="6" value="Centro de votaci&#xf3;n"/>
+                        <StringItem index="7" value="Lugar de Capacitaci&#xf3;n"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="pnlFotoEM">
@@ -434,24 +458,29 @@
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder/>
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Foto"/>
                   </Border>
                 </Property>
+                <Property name="opaque" type="boolean" value="false"/>
               </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="118" max="32767" attributes="0"/>
+                      <Component id="lblFotoEM" alignment="0" pref="148" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="lblFotoEM" alignment="0" pref="148" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblFotoEM">
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="pnlDatosEM">
               <Properties>
@@ -465,15 +494,186 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblDUIEM" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCargoEM" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblDirEM" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfDUIEM" pref="130" max="32767" attributes="0"/>
+                                      <Component id="txfDirEM" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txfCargoEM" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblNombreEM" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCorreoEM" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfCorreoEM" pref="125" max="32767" attributes="0"/>
+                                      <Component id="txfNombreEM" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblTelefonoEM" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblJRVEM" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfTelefonoEM" pref="125" max="32767" attributes="0"/>
+                                      <Component id="txfJVEM" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="lblCVEM" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="txfCVEM" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="btnInfoEM" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="97" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblDUIEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfDUIEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblNombreEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfNombreEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblTelefonoEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfTelefonoEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblDirEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfDirEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblCorreoEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfCorreoEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblJRVEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfJVEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txfCVEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnInfoEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txfCargoEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCargoEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="lblCVEM" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblDUIEM">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="DUI:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfDUIEM">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblNombreEM">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfNombreEM">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblTelefonoEM">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tel&#xe9;fono:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfTelefonoEM">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblDirEM">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Dir:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfDirEM">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCorreoEM">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Correo: "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCorreoEM">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblJRVEM">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="JRV:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfJVEM">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCVEM">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Centro de votaci&#xf3;n:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCVEM">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnInfoEM">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Info"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCargoEM">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCargoEM">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cargo:"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JScrollPane" name="scpnlEM">
 
@@ -490,6 +690,9 @@
                       </Table>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblEMMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -498,9 +701,9 @@
                 <Property name="text" type="java.lang.String" value="Agregar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnEditarEM">
+            <Component class="javax.swing.JButton" name="btnEliminarEM">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Editar"/>
+                <Property name="text" type="java.lang.String" value="Eliminar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnGuardarEM">
@@ -532,20 +735,22 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="scpnlAfiliados" alignment="0" max="32767" attributes="0"/>
                           <Component id="pnlBuscarAfiliado" alignment="1" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="btnAgregarAfiliados" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnEditarAfiliados" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnGuardarAfiliados" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="btnImprimirAfiliados" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Component id="pnlFotoAfiliados" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="pnlDatosAfiliado" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="btnAgregarAfiliados" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnEliminarAfiliados" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnGuardarAfiliados" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="btnImprimirAfiliados" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="pnlDatosAfiliados" alignment="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -558,16 +763,16 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnlBuscarAfiliado" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="pnlDatosAfiliado" alignment="0" max="32767" attributes="0"/>
-                          <Component id="pnlFotoAfiliados" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="pnlDatosAfiliados" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="pnlFotoAfiliados" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scpnlAfiliados" pref="147" max="32767" attributes="0"/>
+                      <Component id="scpnlAfiliados" pref="175" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnGuardarAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnEditarAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnEliminarAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAgregarAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnImprimirAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -591,12 +796,14 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblFiltrarAiliados" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblFiltrarAfiliados" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="txfFiltrarAfiliados" min="-2" pref="220" max="-2" attributes="0"/>
+                          <Component id="txfFiltrarAfiliados" min="-2" pref="298" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="cmbFiltrarAfiliados" min="-2" pref="140" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btnBuscarAfiliados" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="316" max="32767" attributes="0"/>
+                          <EmptySpace pref="183" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -605,9 +812,10 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblFiltrarAiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblFiltrarAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txfFiltrarAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnBuscarAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cmbFiltrarAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -615,12 +823,31 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="lblFiltrarAiliados">
+                <Component class="javax.swing.JLabel" name="lblFiltrarAfiliados">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Filtrar:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txfFiltrarAfiliados">
+                </Component>
+                <Component class="javax.swing.JComboBox" name="cmbFiltrarAfiliados">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="8">
+                        <StringItem index="0" value="--Seleccione filtro--"/>
+                        <StringItem index="1" value="DUI"/>
+                        <StringItem index="2" value="Nombre"/>
+                        <StringItem index="3" value="Apellido"/>
+                        <StringItem index="4" value="JRV"/>
+                        <StringItem index="5" value="Cargo"/>
+                        <StringItem index="6" value="Centro de votaci&#xf3;n"/>
+                        <StringItem index="7" value="Lugar de Capacitaci&#xf3;n"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnBuscarAfiliados">
                   <Properties>
@@ -635,26 +862,31 @@
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder/>
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Foto"/>
                   </Border>
                 </Property>
+                <Property name="opaque" type="boolean" value="false"/>
               </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="118" max="32767" attributes="0"/>
+                      <Component id="lblFotoAfiliados" alignment="0" pref="148" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="lblFotoAfiliados" alignment="0" pref="148" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblFotoAfiliados">
+                </Component>
+              </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="pnlDatosAfiliado">
+            <Container class="javax.swing.JPanel" name="pnlDatosAfiliados">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -666,15 +898,182 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="lblDonacionesAfiliados" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="txfDonacionesAfiliados" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="lblCorreoAfiliados" max="32767" attributes="0"/>
+                                      <Component id="lblDUIAfiliados" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="lblTelefonoAfiliados" alignment="1" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="txfTelefonoAfiliados" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="txfCorreoAfiliados" max="32767" attributes="0"/>
+                                      <Component id="txfDUIAfiliados" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="lblFacebookAfiliados" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="txfFacebookAfiliados" min="-2" pref="210" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="lblNombreAfiliados" pref="49" max="32767" attributes="0"/>
+                                      <Component id="lblDirAfiliados" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfNombreAfiliados" pref="210" max="32767" attributes="0"/>
+                                      <Component id="txfDirAfiliados" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="btnHistorialAfiliados" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="btnFacturaAfiliados" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="97" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblDUIAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfDUIAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblNombreAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfNombreAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblTelefonoAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfTelefonoAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblDirAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfDirAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txfDonacionesAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnHistorialAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnFacturaAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblCorreoAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txfCorreoAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txfFacebookAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblFacebookAfiliados" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="lblDonacionesAfiliados" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblDUIAfiliados">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="DUI:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfDUIAfiliados">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblNombreAfiliados">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfNombreAfiliados">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblTelefonoAfiliados">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tel&#xe9;fono:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfTelefonoAfiliados">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblDirAfiliados">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Dir:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfDirAfiliados">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCorreoAfiliados">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Correo: "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCorreoAfiliados">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblFacebookAfiliados">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Facebook:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfFacebookAfiliados">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblDonacionesAfiliados">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Total donaciones:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfDonacionesAfiliados">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnHistorialAfiliados">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Historal de donaciones"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnFacturaAfiliados">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nueva Factura"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JScrollPane" name="scpnlAfiliados">
 
@@ -691,6 +1090,9 @@
                       </Table>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblAfiliadosMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -699,9 +1101,9 @@
                 <Property name="text" type="java.lang.String" value="Agregar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnEditarAfiliados">
+            <Component class="javax.swing.JButton" name="btnEliminarAfiliados">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Editar"/>
+                <Property name="text" type="java.lang.String" value="Eliminar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnGuardarAfiliados">
@@ -731,22 +1133,24 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scpanelCapacitaciones" alignment="0" max="32767" attributes="0"/>
-                          <Component id="pnlBuscarCapacitaciones" alignment="1" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="btnAgregarCapacitaciones" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnEditarCapacitaciones" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnGuardarCapacitaciones" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="btnImprimirCapacitaciones" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="pnlFotoCapacitaciones" min="-2" max="-2" attributes="0"/>
+                          <Component id="scpnlEM1" alignment="0" pref="770" max="32767" attributes="0"/>
+                          <Component id="pnlBuscarTW1" alignment="1" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="pnlFotoEM1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="pnlDatosCapacitaciones" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="btnAgregarEM1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnEliminarEM2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnGuardarEM1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="btnImprimirEM1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="pnlDatosEM1" alignment="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -757,20 +1161,20 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="pnlBuscarCapacitaciones" min="-2" max="-2" attributes="0"/>
+                      <Component id="pnlBuscarTW1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="pnlDatosCapacitaciones" alignment="0" max="32767" attributes="0"/>
-                          <Component id="pnlFotoCapacitaciones" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="pnlDatosEM1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="pnlFotoEM1" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scpanelCapacitaciones" pref="147" max="32767" attributes="0"/>
+                      <Component id="scpnlEM1" pref="175" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnGuardarCapacitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnEditarCapacitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnAgregarCapacitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnImprimirCapacitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnGuardarEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnEliminarEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAgregarEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnImprimirEM1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -778,7 +1182,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="pnlBuscarCapacitaciones">
+            <Container class="javax.swing.JPanel" name="pnlBuscarTW1">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -792,12 +1196,14 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblFiltrarCapacitaciones" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblFiltrarEM1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="txfFltrarCapacitaciones" min="-2" pref="220" max="-2" attributes="0"/>
+                          <Component id="txfFiltrarEM1" min="-2" pref="298" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="btnBuscarCapacitaciones" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="316" max="32767" attributes="0"/>
+                          <Component id="cmbFiltrarEM1" min="-2" pref="140" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="btnBuscarEM1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -806,9 +1212,10 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblFiltrarCapacitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfFltrarCapacitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnBuscarCapacitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblFiltrarEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfFiltrarEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnBuscarEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cmbFiltrarEM1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -816,46 +1223,70 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="lblFiltrarCapacitaciones">
+                <Component class="javax.swing.JLabel" name="lblFiltrarEM1">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Filtrar:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txfFltrarCapacitaciones">
+                <Component class="javax.swing.JTextField" name="txfFiltrarEM1">
                 </Component>
-                <Component class="javax.swing.JButton" name="btnBuscarCapacitaciones">
+                <Component class="javax.swing.JButton" name="btnBuscarEM1">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Buscar"/>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JComboBox" name="cmbFiltrarEM1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="8">
+                        <StringItem index="0" value="--Seleccione filtro--"/>
+                        <StringItem index="1" value="DUI"/>
+                        <StringItem index="2" value="Nombre"/>
+                        <StringItem index="3" value="Apellido"/>
+                        <StringItem index="4" value="JRV"/>
+                        <StringItem index="5" value="Cargo"/>
+                        <StringItem index="6" value="Centro de votaci&#xf3;n"/>
+                        <StringItem index="7" value="Lugar de Capacitaci&#xf3;n"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="pnlFotoCapacitaciones">
+            <Container class="javax.swing.JPanel" name="pnlFotoEM1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder/>
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Foto"/>
                   </Border>
                 </Property>
+                <Property name="opaque" type="boolean" value="false"/>
               </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="118" max="32767" attributes="0"/>
+                      <Component id="lblFotoEM2" alignment="0" pref="148" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="lblFotoEM2" alignment="0" pref="148" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblFotoEM2">
+                </Component>
+              </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="pnlDatosCapacitaciones">
+            <Container class="javax.swing.JPanel" name="pnlDatosEM1">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -867,21 +1298,192 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblDUIEM1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCargoEM1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblDirEM1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfDUIEM1" alignment="0" pref="130" max="32767" attributes="0"/>
+                                      <Component id="txfDirEM1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txfCargoEM1" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblNombreEM1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCorreoEM1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfCorreoEM1" alignment="0" pref="125" max="32767" attributes="0"/>
+                                      <Component id="txfNombreEM1" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblTelefonoEM1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblJRVEM1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfTelefonoEM1" alignment="0" pref="125" max="32767" attributes="0"/>
+                                      <Component id="txfJVEM1" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblCVEM1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="txfCVEM2" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="btnInfoEM1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="97" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblDUIEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfDUIEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblNombreEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfNombreEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblTelefonoEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfTelefonoEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblDirEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfDirEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblCorreoEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfCorreoEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblJRVEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfJVEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txfCVEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnInfoEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txfCargoEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCargoEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="lblCVEM1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblDUIEM1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="DUI:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfDUIEM1">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblNombreEM1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfNombreEM1">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblTelefonoEM1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tel&#xe9;fono:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfTelefonoEM1">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblDirEM1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Dir:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfDirEM1">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCorreoEM1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Correo: "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCorreoEM1">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblJRVEM1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="JRV:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfJVEM1">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCVEM1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Centro de votaci&#xf3;n:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCVEM2">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnInfoEM1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Info"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCargoEM1">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCargoEM1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cargo:"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
-            <Container class="javax.swing.JScrollPane" name="scpanelCapacitaciones">
+            <Container class="javax.swing.JScrollPane" name="scpnlEM1">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tblCapacitaciones">
+                <Component class="javax.swing.JTable" name="tblEM1">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
@@ -892,25 +1494,28 @@
                       </Table>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblEM1MouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="btnAgregarCapacitaciones">
+            <Component class="javax.swing.JButton" name="btnAgregarEM1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Agregar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnEditarCapacitaciones">
+            <Component class="javax.swing.JButton" name="btnEliminarEM2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Editar"/>
+                <Property name="text" type="java.lang.String" value="Eliminar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnGuardarCapacitaciones">
+            <Component class="javax.swing.JButton" name="btnGuardarEM1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Guardar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnImprimirCapacitaciones">
+            <Component class="javax.swing.JButton" name="btnImprimirEM1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Imprimir"/>
               </Properties>
@@ -932,22 +1537,24 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scpnlComisiones" alignment="0" max="32767" attributes="0"/>
-                          <Component id="pnlBuscarComisiones" alignment="1" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="btnAgregarComisiones" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnEditarComisiones" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnGuardarComisiones" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="btnImprimirComisiones" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="pnlFotoComisiones" min="-2" max="-2" attributes="0"/>
+                          <Component id="scpnlEM2" alignment="0" pref="770" max="32767" attributes="0"/>
+                          <Component id="pnlBuscarTW2" alignment="1" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="pnlFotoEM2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="pnlDatosComisiones" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="btnAgregarEM2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnEliminarEM3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnGuardarEM2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="btnImprimirEM2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="pnlDatosEM2" alignment="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -958,20 +1565,20 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="pnlBuscarComisiones" min="-2" max="-2" attributes="0"/>
+                      <Component id="pnlBuscarTW2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="pnlDatosComisiones" alignment="0" max="32767" attributes="0"/>
-                          <Component id="pnlFotoComisiones" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="pnlDatosEM2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="pnlFotoEM2" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scpnlComisiones" pref="147" max="32767" attributes="0"/>
+                      <Component id="scpnlEM2" pref="175" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnGuardarComisiones" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnEditarComisiones" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnAgregarComisiones" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnImprimirComisiones" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnGuardarEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnEliminarEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAgregarEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnImprimirEM2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -979,7 +1586,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="pnlBuscarComisiones">
+            <Container class="javax.swing.JPanel" name="pnlBuscarTW2">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -993,12 +1600,14 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblFiltrarComisiones" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblFiltrarEM2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="txfFiltrarComisiones" min="-2" pref="220" max="-2" attributes="0"/>
+                          <Component id="txfFiltrarEM2" min="-2" pref="298" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="btnBuscarComisiones" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="316" max="32767" attributes="0"/>
+                          <Component id="cmbFiltrarEM2" min="-2" pref="140" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="btnBuscarEM2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1007,9 +1616,10 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblFiltrarComisiones" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfFiltrarComisiones" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnBuscarComisiones" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblFiltrarEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfFiltrarEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnBuscarEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cmbFiltrarEM2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -1017,46 +1627,70 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="lblFiltrarComisiones">
+                <Component class="javax.swing.JLabel" name="lblFiltrarEM2">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Filtrar:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txfFiltrarComisiones">
+                <Component class="javax.swing.JTextField" name="txfFiltrarEM2">
                 </Component>
-                <Component class="javax.swing.JButton" name="btnBuscarComisiones">
+                <Component class="javax.swing.JButton" name="btnBuscarEM2">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Buscar"/>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JComboBox" name="cmbFiltrarEM2">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="8">
+                        <StringItem index="0" value="--Seleccione filtro--"/>
+                        <StringItem index="1" value="DUI"/>
+                        <StringItem index="2" value="Nombre"/>
+                        <StringItem index="3" value="Apellido"/>
+                        <StringItem index="4" value="JRV"/>
+                        <StringItem index="5" value="Cargo"/>
+                        <StringItem index="6" value="Centro de votaci&#xf3;n"/>
+                        <StringItem index="7" value="Lugar de Capacitaci&#xf3;n"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="pnlFotoComisiones">
+            <Container class="javax.swing.JPanel" name="pnlFotoEM2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder/>
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Foto"/>
                   </Border>
                 </Property>
+                <Property name="opaque" type="boolean" value="false"/>
               </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="118" max="32767" attributes="0"/>
+                      <Component id="lblFotoEM3" alignment="0" pref="148" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="lblFotoEM3" alignment="0" pref="148" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblFotoEM3">
+                </Component>
+              </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="pnlDatosComisiones">
+            <Container class="javax.swing.JPanel" name="pnlDatosEM2">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -1068,21 +1702,192 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblDUIEM2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCargoEM2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblDirEM2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfDUIEM2" alignment="0" pref="130" max="32767" attributes="0"/>
+                                      <Component id="txfDirEM2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txfCargoEM2" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblNombreEM2" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCorreoEM2" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfCorreoEM2" alignment="0" pref="125" max="32767" attributes="0"/>
+                                      <Component id="txfNombreEM2" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblTelefonoEM2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblJRVEM2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfTelefonoEM2" alignment="0" pref="125" max="32767" attributes="0"/>
+                                      <Component id="txfJVEM2" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblCVEM2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="txfCVEM3" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="btnInfoEM2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="97" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblDUIEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfDUIEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblNombreEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfNombreEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblTelefonoEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfTelefonoEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblDirEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfDirEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblCorreoEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfCorreoEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblJRVEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfJVEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txfCVEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnInfoEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txfCargoEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCargoEM2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="lblCVEM2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblDUIEM2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="DUI:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfDUIEM2">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblNombreEM2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfNombreEM2">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblTelefonoEM2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tel&#xe9;fono:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfTelefonoEM2">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblDirEM2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Dir:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfDirEM2">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCorreoEM2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Correo: "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCorreoEM2">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblJRVEM2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="JRV:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfJVEM2">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCVEM2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Centro de votaci&#xf3;n:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCVEM3">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnInfoEM2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Info"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCargoEM2">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCargoEM2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cargo:"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
-            <Container class="javax.swing.JScrollPane" name="scpnlComisiones">
+            <Container class="javax.swing.JScrollPane" name="scpnlEM2">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tblComisiones">
+                <Component class="javax.swing.JTable" name="tblEM2">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
@@ -1093,25 +1898,28 @@
                       </Table>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblEM2MouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="btnAgregarComisiones">
+            <Component class="javax.swing.JButton" name="btnAgregarEM2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Agregar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnEditarComisiones">
+            <Component class="javax.swing.JButton" name="btnEliminarEM3">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Editar"/>
+                <Property name="text" type="java.lang.String" value="Eliminar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnGuardarComisiones">
+            <Component class="javax.swing.JButton" name="btnGuardarEM2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Guardar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnImprimirComisiones">
+            <Component class="javax.swing.JButton" name="btnImprimirEM2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Imprimir"/>
               </Properties>
@@ -1130,12 +1938,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="695" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="790" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="420" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="500" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1152,12 +1960,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="695" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="790" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="420" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="500" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1177,22 +1985,24 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scpnlVisitas" max="32767" attributes="0"/>
-                          <Component id="pnlBuscarVisitas" alignment="1" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="btnAgregarVisitas" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnEditarVisitas" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnGuardarVisitas" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="btnImprimirVisitas" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="pnlFotoVisitas" min="-2" max="-2" attributes="0"/>
+                          <Component id="scpnlEM3" alignment="0" pref="770" max="32767" attributes="0"/>
+                          <Component id="pnlBuscarTW3" alignment="1" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="pnlFotoEM3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="pnlDatosVisitas" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="btnAgregarEM3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnEliminarEM4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnGuardarEM3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="btnImprimirEM3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="pnlDatosEM3" alignment="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1203,20 +2013,20 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="pnlBuscarVisitas" min="-2" max="-2" attributes="0"/>
+                      <Component id="pnlBuscarTW3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="pnlDatosVisitas" max="32767" attributes="0"/>
-                          <Component id="pnlFotoVisitas" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="pnlDatosEM3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="pnlFotoEM3" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scpnlVisitas" pref="147" max="32767" attributes="0"/>
+                      <Component id="scpnlEM3" pref="175" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnGuardarVisitas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnEditarVisitas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnAgregarVisitas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnImprimirVisitas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnGuardarEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnEliminarEM4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAgregarEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnImprimirEM3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1224,7 +2034,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="pnlBuscarVisitas">
+            <Container class="javax.swing.JPanel" name="pnlBuscarTW3">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -1238,12 +2048,14 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblFiltrarVisitas" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblFiltrarEM3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="txfFiltrarVisitas" min="-2" pref="220" max="-2" attributes="0"/>
+                          <Component id="txfFiltrarEM3" min="-2" pref="298" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="btnBuscarVisitas" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="316" max="32767" attributes="0"/>
+                          <Component id="cmbFiltrarEM3" min="-2" pref="140" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="btnBuscarEM3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1252,9 +2064,10 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblFiltrarVisitas" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfFiltrarVisitas" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnBuscarVisitas" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblFiltrarEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfFiltrarEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnBuscarEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cmbFiltrarEM3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -1262,21 +2075,70 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="lblFiltrarVisitas">
+                <Component class="javax.swing.JLabel" name="lblFiltrarEM3">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Filtrar:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txfFiltrarVisitas">
+                <Component class="javax.swing.JTextField" name="txfFiltrarEM3">
                 </Component>
-                <Component class="javax.swing.JButton" name="btnBuscarVisitas">
+                <Component class="javax.swing.JButton" name="btnBuscarEM3">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Buscar"/>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JComboBox" name="cmbFiltrarEM3">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="8">
+                        <StringItem index="0" value="--Seleccione filtro--"/>
+                        <StringItem index="1" value="DUI"/>
+                        <StringItem index="2" value="Nombre"/>
+                        <StringItem index="3" value="Apellido"/>
+                        <StringItem index="4" value="JRV"/>
+                        <StringItem index="5" value="Cargo"/>
+                        <StringItem index="6" value="Centro de votaci&#xf3;n"/>
+                        <StringItem index="7" value="Lugar de Capacitaci&#xf3;n"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="pnlDatosVisitas">
+            <Container class="javax.swing.JPanel" name="pnlFotoEM3">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="33" red="33" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Foto"/>
+                  </Border>
+                </Property>
+                <Property name="opaque" type="boolean" value="false"/>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lblFotoEM4" alignment="0" pref="148" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lblFotoEM4" alignment="0" pref="148" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblFotoEM4">
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="pnlDatosEM3">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -1288,46 +2150,192 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblDUIEM3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCargoEM3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblDirEM3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfDUIEM3" alignment="0" pref="130" max="32767" attributes="0"/>
+                                      <Component id="txfDirEM3" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txfCargoEM3" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblNombreEM3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCorreoEM3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfCorreoEM3" alignment="0" pref="125" max="32767" attributes="0"/>
+                                      <Component id="txfNombreEM3" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblTelefonoEM3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblJRVEM3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txfTelefonoEM3" alignment="0" pref="125" max="32767" attributes="0"/>
+                                      <Component id="txfJVEM3" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblCVEM3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="txfCVEM4" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="btnInfoEM3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="97" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblDUIEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfDUIEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblNombreEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfNombreEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblTelefonoEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfTelefonoEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblDirEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfDirEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblCorreoEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfCorreoEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblJRVEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfJVEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txfCVEM4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnInfoEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txfCargoEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCargoEM3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="lblCVEM3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblDUIEM3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="DUI:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfDUIEM3">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblNombreEM3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nombre:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfNombreEM3">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblTelefonoEM3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tel&#xe9;fono:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfTelefonoEM3">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblDirEM3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Dir:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfDirEM3">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCorreoEM3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Correo: "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCorreoEM3">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblJRVEM3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="JRV:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfJVEM3">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCVEM3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Centro de votaci&#xf3;n:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCVEM4">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnInfoEM3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Info"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txfCargoEM3">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCargoEM3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cargo:"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="pnlFotoVisitas">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="33" red="33" type="rgb"/>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder/>
-                  </Border>
-                </Property>
-              </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="118" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-            </Container>
-            <Container class="javax.swing.JScrollPane" name="scpnlVisitas">
+            <Container class="javax.swing.JScrollPane" name="scpnlEM3">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tblVisitas">
+                <Component class="javax.swing.JTable" name="tblEM3">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
@@ -1338,25 +2346,28 @@
                       </Table>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblEM3MouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="btnAgregarVisitas">
+            <Component class="javax.swing.JButton" name="btnAgregarEM3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Agregar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnEditarVisitas">
+            <Component class="javax.swing.JButton" name="btnEliminarEM4">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Editar"/>
+                <Property name="text" type="java.lang.String" value="Eliminar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnGuardarVisitas">
+            <Component class="javax.swing.JButton" name="btnGuardarEM3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Guardar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnImprimirVisitas">
+            <Component class="javax.swing.JButton" name="btnImprimirEM3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Imprimir"/>
               </Properties>
@@ -1378,7 +2389,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scpnlDatosFacturacion" alignment="1" pref="675" max="32767" attributes="0"/>
+                          <Component id="scpnlDatosFacturacion" alignment="1" pref="770" max="32767" attributes="0"/>
                           <Component id="pnlFiltrarDatosFacturacion" alignment="1" max="32767" attributes="0"/>
                           <Component id="pnlControlFacturacion" alignment="0" max="32767" attributes="0"/>
                       </Group>
@@ -1392,7 +2403,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnlFiltrarDatosFacturacion" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="scpnlDatosFacturacion" pref="251" max="32767" attributes="0"/>
+                      <Component id="scpnlDatosFacturacion" pref="331" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnlControlFacturacion" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -1598,8 +2609,8 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="pnlAdmin" pref="675" max="32767" attributes="0"/>
-                          <Component id="pnlDescripcion" alignment="0" pref="675" max="32767" attributes="0"/>
+                          <Component id="pnlAdmin" pref="770" max="32767" attributes="0"/>
+                          <Component id="pnlDescripcion" alignment="0" pref="770" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1638,7 +2649,7 @@
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Component id="btnCargoCom" alignment="0" max="32767" attributes="0"/>
                               <Component id="btnCargosME" alignment="0" max="32767" attributes="0"/>
-                              <Component id="btnCentroVotacion" max="32767" attributes="0"/>
+                              <Component id="btnCentroVotacion" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -1650,9 +2661,9 @@
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="btnMunicipios" max="32767" attributes="0"/>
                               <Component id="btnNivelesAcad" max="32767" attributes="0"/>
-                              <Component id="btnPartidos" max="32767" attributes="0"/>
+                              <Component id="btnPartidos" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="33" max="32767" attributes="0"/>
+                          <EmptySpace pref="128" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
