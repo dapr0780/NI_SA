@@ -110,6 +110,68 @@ public class QMiembroElectoral {
         return listaMiembrosElec;
     }
     
+    public MiembroElectoral mostrarMiembro(String dui){
+        MiembroElectoral miembro = new MiembroElectoral();
+        try{
+            Statement sentencia = null;
+            ResultSet resultado = null;
+            sentencia = con.conectar().createStatement();
+            resultado = sentencia.executeQuery("SELECT "
+                    + "miembroelectoral.dui, persona.nombre, persona.apellido, "
+                    + "persona.telefono, persona.direccion, persona.correo, "
+                    + "jrv.idjrv, cargo.cargo, centrovotacion.nombre, "
+                    + "centrovotacion.direccion, departamento.departamento, "
+                    + "municipio.municipio, miembroelectoral.fecha, "
+                    + "centrovotacion.nombre, centrovotacion.direccion, "
+                    + "departamento.departamento, municipio.municipio, "
+                    + "capacitacion.fecha, persona.foto FROM miembroelectoral "
+                    + "INNER JOIN persona ON persona.dui=miembroelectoral.dui "
+                    + "INNER JOIN cargo ON miembroelectoral.cargo=cargo.idcargo "
+                    + "INNER JOIN jrv ON miembroelectoral.jrv=jrv.idjrv "
+                    + "INNER JOIN centrovotacion ON "
+                    + "jrv.centrovotacion=centrovotacion.idcentrovotacion AND "
+                    + "miembroelectoral.lugarcapacitacion=centrovotacion.idcentrovotacion "
+                    + "INNER JOIN municipio ON centrovotacion.municipio=municipio.idmunicipio "
+                    + "INNER JOIN departamento ON municipio.departamento=departamento.iddepartamento "
+                    + "INNER JOIN capacitacion ON miembroelectoral.dui=capacitacion.dui "
+                    + "WHERE miembroelectoral.dui="+dui);
+            resultado.last();
+            
+            if(resultado.getRow()<=0){
+                return miembro;
+            }else{
+                resultado.beforeFirst();
+                while(resultado.next()){
+                    //int dui = (Integer) resultado.getObject(1);
+                    String nombre = resultado.getObject(2).toString(); 
+                    String apellido = resultado.getObject(3).toString();
+                    String telefono = evaluarStringNulo(resultado.getObject(4));
+                    String direccion = evaluarStringNulo(resultado.getObject(5));
+                    String correo = evaluarStringNulo(resultado.getObject(6));
+                    int jrv = (Integer)resultado.getObject(7);
+                    String cargo = evaluarStringNulo(resultado.getObject(8));
+                    String centroVotacion = evaluarStringNulo(resultado.getObject(9));
+                    String dirCentroVot = evaluarStringNulo(resultado.getObject(10));
+                    String departamentoVot = evaluarStringNulo(resultado.getObject(11));
+                    String municipioVot = evaluarStringNulo(resultado.getObject(12));
+                    Date fechaRegistro = Date.valueOf(evaluarStringNulo(resultado.getObject(13)));
+                    String lugarCapacitacion = resultado.getObject(14).toString();
+                    String dirCentroCap = resultado.getObject(15).toString();
+                    String departamentoCap = resultado.getObject(16).toString();
+                    String municipioCap = resultado.getObject(17).toString();
+                    Date fechaCapacitacion = Date.valueOf(resultado.getObject(18).toString());
+                    String foto = evaluarStringNulo(resultado.getObject(19));
+                    miembro = new MiembroElectoral(Integer.parseInt(dui), nombre, apellido, telefono, direccion, correo, jrv, cargo, centroVotacion, dirCentroVot, departamentoVot, municipioVot, fechaRegistro, lugarCapacitacion, dirCentroCap, departamentoCap, municipioCap, fechaCapacitacion, foto);
+                }
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        } finally{
+            con.desconectar();
+        }
+        return miembro;
+    }
+    
     public String evaluarStringNulo(Object dato){
         if(dato==null){
             return "n/a";
