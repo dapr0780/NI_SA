@@ -86,6 +86,42 @@ public class QPersonas {
         return listaPersonas;
     }
     
+    public List<Personas> mostrarPersonasPor(String tipoFiltro, String filtro){
+        List<Personas> listaPersonas = new ArrayList<Personas>();
+        try{
+            Statement sentencia = null;
+            ResultSet resultado = null;
+            sentencia = con.conectar().createStatement();
+            resultado = sentencia.executeQuery("SELECT dui, nombre, apellido, telefono, direccion, correo, foto, nivelAcademico.nivelAcademico, facebook FROM persona LEFT JOIN nivelAcademico ON persona.nivelAcademico = nivelAcademico.idNivelAcademico WHERE "+tipoFiltro+" like '"+filtro+"%';");
+            resultado.last();
+            
+            if(resultado.getRow()<=0){
+                listaPersonas.clear();
+                return listaPersonas;
+            }else{
+                resultado.beforeFirst();
+                while(resultado.next()){
+                    int dui = (Integer) resultado.getObject("dui");
+                    String nombre = evaluarStringNulo(resultado.getObject("nombre"));
+                    String apellido = evaluarStringNulo(resultado.getObject("apellido"));
+                    String telefono = evaluarStringNulo(resultado.getObject("telefono"));
+                    String direccion = evaluarStringNulo(resultado.getObject("direccion"));;
+                    String correo = evaluarStringNulo(resultado.getObject("correo"));
+                    String foto = evaluarStringNulo(resultado.getObject("foto"));
+                    String nivelAcademico = evaluarStringNulo(resultado.getObject("nivelAcademico"));
+                    String facebook = evaluarStringNulo(resultado.getObject("facebook"));
+                    Personas per = new Personas(dui, nombre, apellido, telefono, direccion, correo, foto, nivelAcademico, facebook);
+                    listaPersonas.add(per);
+                }
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        } finally{
+            con.desconectar();
+        }
+        return listaPersonas;
+    }
+    
     public String evaluarStringNulo(Object dato){
         if(dato==null){
             return "n/a";

@@ -238,6 +238,4 @@ public class MiembroElectoral {
         this.foto = foto;
     }
     
-    
-    
 }
