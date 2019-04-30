@@ -150,13 +150,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txfFiltrarBuscar" min="-2" pref="220" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="txfFiltrarBuscar" min="-2" pref="309" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="cmbFiltrarDatosBuscar" min="-2" pref="125" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btnAplicarFiltroBuscar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnLimpiarFiltrosBuscar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -169,7 +167,6 @@
                               <Component id="txfFiltrarBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="cmbFiltrarDatosBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnAplicarFiltroBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnLimpiarFiltrosBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -201,11 +198,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Aplicar filtro"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="btnLimpiarFiltrosBuscar">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Limpiar filtros"/>
-                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAplicarFiltroBuscarActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -291,6 +286,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Imprimir"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnImprimirBuscarActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnSalirBuscar">
                   <Properties>
@@ -1133,10 +1131,10 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scpnlEM1" alignment="0" pref="770" max="32767" attributes="0"/>
-                          <Component id="pnlBuscarTW1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="scpnlCapacitaciones" alignment="0" pref="770" max="32767" attributes="0"/>
+                          <Component id="pnlBuscarCapacitaciones" alignment="1" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="pnlFotoEM1" min="-2" max="-2" attributes="0"/>
+                              <Component id="pnlFotoCapacitaciones" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -1149,7 +1147,7 @@
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="btnImprimirEM1" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="pnlDatosEM1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnlDatosCapacitaciones" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1161,14 +1159,14 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="pnlBuscarTW1" min="-2" max="-2" attributes="0"/>
+                      <Component id="pnlBuscarCapacitaciones" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="pnlDatosEM1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="pnlFotoEM1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="pnlDatosCapacitaciones" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="pnlFotoCapacitaciones" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scpnlEM1" pref="175" max="32767" attributes="0"/>
+                      <Component id="scpnlCapacitaciones" pref="175" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnGuardarEM1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1182,7 +1180,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="pnlBuscarTW1">
+            <Container class="javax.swing.JPanel" name="pnlBuscarCapacitaciones">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -1196,13 +1194,13 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblFiltrarEM1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblFiltrarCapacitaciones" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="txfFiltrarEM1" min="-2" pref="298" max="-2" attributes="0"/>
+                          <Component id="txfFiltrarCapacitaciones" min="-2" pref="298" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="cmbFiltrarEM1" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="cmbFiltrarCapacitaciones" min="-2" pref="140" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="btnBuscarEM1" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnBuscarCapacitaciones" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -1212,10 +1210,10 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblFiltrarEM1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txfFiltrarEM1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnBuscarEM1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cmbFiltrarEM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblFiltrarCapacitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txfFiltrarCapacitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnBuscarCapacitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cmbFiltrarCapacitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -1223,19 +1221,19 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="lblFiltrarEM1">
+                <Component class="javax.swing.JLabel" name="lblFiltrarCapacitaciones">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Filtrar:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txfFiltrarEM1">
+                <Component class="javax.swing.JTextField" name="txfFiltrarCapacitaciones">
                 </Component>
-                <Component class="javax.swing.JButton" name="btnBuscarEM1">
+                <Component class="javax.swing.JButton" name="btnBuscarCapacitaciones">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Buscar"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="cmbFiltrarEM1">
+                <Component class="javax.swing.JComboBox" name="cmbFiltrarCapacitaciones">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="8">
@@ -1256,7 +1254,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="pnlFotoEM1">
+            <Container class="javax.swing.JPanel" name="pnlFotoCapacitaciones">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
@@ -1272,21 +1270,21 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblFotoEM2" alignment="0" pref="148" max="32767" attributes="0"/>
+                      <Component id="lblFotoCapacitaciones" alignment="0" pref="148" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblFotoEM2" alignment="0" pref="148" max="32767" attributes="0"/>
+                      <Component id="lblFotoCapacitaciones" alignment="0" pref="148" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="lblFotoEM2">
+                <Component class="javax.swing.JLabel" name="lblFotoCapacitaciones">
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="pnlDatosEM1">
+            <Container class="javax.swing.JPanel" name="pnlDatosCapacitaciones">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -1479,11 +1477,11 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JScrollPane" name="scpnlEM1">
+            <Container class="javax.swing.JScrollPane" name="scpnlCapacitaciones">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tblEM1">
+                <Component class="javax.swing.JTable" name="tblCapacitaciones">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
@@ -1495,7 +1493,7 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblEM1MouseClicked"/>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblCapacitacionesMouseClicked"/>
                   </Events>
                 </Component>
               </SubComponents>

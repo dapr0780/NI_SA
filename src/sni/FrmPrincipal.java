@@ -8,10 +8,21 @@ package sni;
 import java.awt.Color;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.swing.ImageIcon;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -22,6 +33,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
     QPersonas qPersonas = new QPersonas();
     QMiembroElectoral qMiembroElectoral = new QMiembroElectoral();
     QAfiliado qAfiliados = new QAfiliado();
+    QCapacitaciones qCapacitaciones = new QCapacitaciones();
+    URL pathReporteBuscar=this.getClass().getResource("/reportes/general.jasper");
+    Map parametroReporteBuscar = null;
+    String paramReporteBuscar="";
 
     /**
      * Creates new form Principal
@@ -47,6 +62,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         setDescripcionGnral();
         iniciarEM();
         iniciarAfiliados();
+        iniciarCapacitaciones();
     }
     
     // <editor-fold defaultstate="collapsed" desc="Panel Buscar">
@@ -56,7 +72,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     
     public void actualizarTblBuscar(){
         tblDatosBuscar.setModel(llenarTblBuscar());
-        tabla.resizeColumnWidth(tblDatosBuscar);
+        //tblDatosBuscar.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        //tabla.resizeColumnWidth(tblDatosBuscar);
     }
     
     public DefaultTableModel llenarTblBuscar(){
@@ -75,6 +92,38 @@ public class FrmPrincipal extends javax.swing.JFrame {
         
         personas = qPersonas.mostrarPersonas();
         
+        int i=0;
+        for(Personas per:personas){
+            dtmModelo.addRow(new Object[]{});
+            dtmModelo.setValueAt(per.getDui(),i,0);
+            dtmModelo.setValueAt(per.getNombre(),i,1);
+            dtmModelo.setValueAt(per.getApellido(),i,2);
+            dtmModelo.setValueAt(per.getTelefono(),i,3);
+            dtmModelo.setValueAt(per.getDireccion(),i,4);
+            dtmModelo.setValueAt(per.getCorreo(),i,5);
+            dtmModelo.setValueAt(per.getFoto(),i,6);
+            dtmModelo.setValueAt(per.getNivelAcademico(),i,7);
+            dtmModelo.setValueAt(per.getFacebook(),i,8);
+            i++;
+        }
+        return dtmModelo;
+    }
+    
+    public DefaultTableModel llenarTblBuscar(String tipoFiltro, String filtro){
+        List<Personas> personas = new ArrayList<Personas>();
+        DefaultTableModel dtmModelo = new DefaultTableModel();
+        
+        dtmModelo.addColumn("DUI");
+        dtmModelo.addColumn("Nombres");
+        dtmModelo.addColumn("Apellidos");
+        dtmModelo.addColumn("Teléfono");
+        dtmModelo.addColumn("Dirección");
+        dtmModelo.addColumn("Correo");
+        dtmModelo.addColumn("Foto");
+        dtmModelo.addColumn("Nivel Académico");
+        dtmModelo.addColumn("Facebook");
+        
+        personas = qPersonas.mostrarPersonasPor(tipoFiltro, filtro);
         int i=0;
         for(Personas per:personas){
             dtmModelo.addRow(new Object[]{});
@@ -210,6 +259,62 @@ public class FrmPrincipal extends javax.swing.JFrame {
     
     //</editor-fold>
     
+    // <editor-fold desc="Capacitaciones">
+    public void iniciarCapacitaciones(){
+        actualizarTblCapacitaciones();
+        lblFotoCapacitaciones.setIcon(new ImageIcon(SNI.class.getResource("/images/user.png")));
+    }
+    
+    public void actualizarTblCapacitaciones(){
+        tblCapacitaciones.setModel(llenarTblCapacitaciones());
+        tabla.resizeColumnWidth(tblCapacitaciones);
+    }
+    
+    public DefaultTableModel llenarTblCapacitaciones(){
+        List<Capacitaciones> capacitaciones = new ArrayList<Capacitaciones>();
+        DefaultTableModel dtmModelo = new DefaultTableModel();
+        
+        dtmModelo.addColumn("DUI");
+        dtmModelo.addColumn("Nombre");
+        dtmModelo.addColumn("Telefono");
+        dtmModelo.addColumn("Dirección");
+        dtmModelo.addColumn("Correo");
+        dtmModelo.addColumn("Asistencias");
+        
+        capacitaciones = qCapacitaciones.mostrarCapacitaciones();
+        
+        int i=0;
+        for(Capacitaciones cap:capacitaciones){
+            dtmModelo.addRow(new Object[]{});
+            dtmModelo.setValueAt(cap.getDui(),i,0);
+            dtmModelo.setValueAt(cap.getNombre()+" "+cap.getApellido(),i,1);
+            dtmModelo.setValueAt(cap.getTelefono(),i,2);
+            dtmModelo.setValueAt(cap.getDireccion(),i,3);
+            dtmModelo.setValueAt(cap.getCorreo(),i,4);
+            dtmModelo.setValueAt(cap.getAsistencias().toString(),i,5);
+            i++;
+        }
+        
+        return dtmModelo;
+    }
+    /*
+    public void getCapacitacionesById(String dui){
+        MiembroElectoral miembro = new MiembroElectoral();
+                
+        miembro = qMiembroElectoral.mostrarMiembro(dui);
+        
+        txfDUIEM.setText(dui);
+        txfNombreEM.setText(miembro.getNombre() + " "+ miembro.getApellido());
+        txfTelefonoEM.setText(miembro.getTelefono());
+        txfDirEM.setText(miembro.getDireccion());
+        txfCorreoEM.setText(miembro.getTelefono());
+        txfJVEM.setText(String.valueOf(miembro.getJrv()));
+        txfCargoEM.setText(miembro.getCargo());
+        txfCVEM.setText(miembro.getCentroVotacion());
+    }
+    */
+    //</editor-fold>
+    
     public String evaluarNulo(String dato){
         if(dato==null){
             return "n/a";
@@ -246,7 +351,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         txfFiltrarBuscar = new javax.swing.JTextField();
         cmbFiltrarDatosBuscar = new javax.swing.JComboBox<>();
         btnAplicarFiltroBuscar = new javax.swing.JButton();
-        btnLimpiarFiltrosBuscar = new javax.swing.JButton();
         scpnlDatosBuscar = new javax.swing.JScrollPane();
         tblDatosBuscar = new javax.swing.JTable();
         pnlControlBuscar = new javax.swing.JPanel();
@@ -319,14 +423,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnGuardarAfiliados = new javax.swing.JButton();
         btnImprimirAfiliados = new javax.swing.JButton();
         pnlCapacitaciones = new javax.swing.JPanel();
-        pnlBuscarTW1 = new javax.swing.JPanel();
-        lblFiltrarEM1 = new javax.swing.JLabel();
-        txfFiltrarEM1 = new javax.swing.JTextField();
-        btnBuscarEM1 = new javax.swing.JButton();
-        cmbFiltrarEM1 = new javax.swing.JComboBox<>();
-        pnlFotoEM1 = new javax.swing.JPanel();
-        lblFotoEM2 = new javax.swing.JLabel();
-        pnlDatosEM1 = new javax.swing.JPanel();
+        pnlBuscarCapacitaciones = new javax.swing.JPanel();
+        lblFiltrarCapacitaciones = new javax.swing.JLabel();
+        txfFiltrarCapacitaciones = new javax.swing.JTextField();
+        btnBuscarCapacitaciones = new javax.swing.JButton();
+        cmbFiltrarCapacitaciones = new javax.swing.JComboBox<>();
+        pnlFotoCapacitaciones = new javax.swing.JPanel();
+        lblFotoCapacitaciones = new javax.swing.JLabel();
+        pnlDatosCapacitaciones = new javax.swing.JPanel();
         lblDUIEM1 = new javax.swing.JLabel();
         txfDUIEM1 = new javax.swing.JTextField();
         lblNombreEM1 = new javax.swing.JLabel();
@@ -344,8 +448,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnInfoEM1 = new javax.swing.JButton();
         txfCargoEM1 = new javax.swing.JTextField();
         lblCargoEM1 = new javax.swing.JLabel();
-        scpnlEM1 = new javax.swing.JScrollPane();
-        tblEM1 = new javax.swing.JTable();
+        scpnlCapacitaciones = new javax.swing.JScrollPane();
+        tblCapacitaciones = new javax.swing.JTable();
         btnAgregarEM1 = new javax.swing.JButton();
         btnEliminarEM2 = new javax.swing.JButton();
         btnGuardarEM1 = new javax.swing.JButton();
@@ -462,8 +566,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         cmbFiltrarDatosBuscar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DUI", "Nombre", "Apellido", "Teléfono", "Dirección", "Correo", "Nivel Académico" }));
 
         btnAplicarFiltroBuscar.setText("Aplicar filtro");
-
-        btnLimpiarFiltrosBuscar.setText("Limpiar filtros");
+        btnAplicarFiltroBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAplicarFiltroBuscarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlFiltrarDatosBuscarLayout = new javax.swing.GroupLayout(pnlFiltrarDatosBuscar);
         pnlFiltrarDatosBuscar.setLayout(pnlFiltrarDatosBuscarLayout);
@@ -471,13 +578,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
             pnlFiltrarDatosBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlFiltrarDatosBuscarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txfFiltrarBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txfFiltrarBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(cmbFiltrarDatosBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnAplicarFiltroBuscar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnLimpiarFiltrosBuscar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlFiltrarDatosBuscarLayout.setVerticalGroup(
@@ -487,8 +592,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 .addGroup(pnlFiltrarDatosBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txfFiltrarBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmbFiltrarDatosBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAplicarFiltroBuscar)
-                    .addComponent(btnLimpiarFiltrosBuscar))
+                    .addComponent(btnAplicarFiltroBuscar))
                 .addContainerGap())
         );
 
@@ -512,6 +616,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnGuardarBuscar.setText("Guardar");
 
         btnImprimirBuscar.setText("Imprimir");
+        btnImprimirBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImprimirBuscarActionPerformed(evt);
+            }
+        });
 
         btnSalirBuscar.setText("Salir");
         btnSalirBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -1051,57 +1160,57 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         tbpPrincipal.addTab("Afiliados", pnlAfiliados);
 
-        pnlBuscarTW1.setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar"));
+        pnlBuscarCapacitaciones.setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar"));
 
-        lblFiltrarEM1.setText("Filtrar:");
+        lblFiltrarCapacitaciones.setText("Filtrar:");
 
-        btnBuscarEM1.setText("Buscar");
+        btnBuscarCapacitaciones.setText("Buscar");
 
-        cmbFiltrarEM1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione filtro--", "DUI", "Nombre", "Apellido", "JRV", "Cargo", "Centro de votación", "Lugar de Capacitación" }));
+        cmbFiltrarCapacitaciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccione filtro--", "DUI", "Nombre", "Apellido", "JRV", "Cargo", "Centro de votación", "Lugar de Capacitación" }));
 
-        javax.swing.GroupLayout pnlBuscarTW1Layout = new javax.swing.GroupLayout(pnlBuscarTW1);
-        pnlBuscarTW1.setLayout(pnlBuscarTW1Layout);
-        pnlBuscarTW1Layout.setHorizontalGroup(
-            pnlBuscarTW1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBuscarTW1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlBuscarCapacitacionesLayout = new javax.swing.GroupLayout(pnlBuscarCapacitaciones);
+        pnlBuscarCapacitaciones.setLayout(pnlBuscarCapacitacionesLayout);
+        pnlBuscarCapacitacionesLayout.setHorizontalGroup(
+            pnlBuscarCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlBuscarCapacitacionesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblFiltrarEM1)
+                .addComponent(lblFiltrarCapacitaciones)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txfFiltrarEM1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txfFiltrarCapacitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cmbFiltrarEM1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbFiltrarCapacitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnBuscarEM1)
+                .addComponent(btnBuscarCapacitaciones)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        pnlBuscarTW1Layout.setVerticalGroup(
-            pnlBuscarTW1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBuscarTW1Layout.createSequentialGroup()
+        pnlBuscarCapacitacionesLayout.setVerticalGroup(
+            pnlBuscarCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlBuscarCapacitacionesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnlBuscarTW1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblFiltrarEM1)
-                    .addComponent(txfFiltrarEM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBuscarEM1)
-                    .addComponent(cmbFiltrarEM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnlBuscarCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFiltrarCapacitaciones)
+                    .addComponent(txfFiltrarCapacitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscarCapacitaciones)
+                    .addComponent(cmbFiltrarCapacitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pnlFotoEM1.setBackground(new java.awt.Color(51, 51, 255));
-        pnlFotoEM1.setBorder(javax.swing.BorderFactory.createTitledBorder("Foto"));
-        pnlFotoEM1.setOpaque(false);
+        pnlFotoCapacitaciones.setBackground(new java.awt.Color(51, 51, 255));
+        pnlFotoCapacitaciones.setBorder(javax.swing.BorderFactory.createTitledBorder("Foto"));
+        pnlFotoCapacitaciones.setOpaque(false);
 
-        javax.swing.GroupLayout pnlFotoEM1Layout = new javax.swing.GroupLayout(pnlFotoEM1);
-        pnlFotoEM1.setLayout(pnlFotoEM1Layout);
-        pnlFotoEM1Layout.setHorizontalGroup(
-            pnlFotoEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblFotoEM2, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+        javax.swing.GroupLayout pnlFotoCapacitacionesLayout = new javax.swing.GroupLayout(pnlFotoCapacitaciones);
+        pnlFotoCapacitaciones.setLayout(pnlFotoCapacitacionesLayout);
+        pnlFotoCapacitacionesLayout.setHorizontalGroup(
+            pnlFotoCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblFotoCapacitaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
         );
-        pnlFotoEM1Layout.setVerticalGroup(
-            pnlFotoEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblFotoEM2, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+        pnlFotoCapacitacionesLayout.setVerticalGroup(
+            pnlFotoCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblFotoCapacitaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
         );
 
-        pnlDatosEM1.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos"));
+        pnlDatosCapacitaciones.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos"));
 
         lblDUIEM1.setText("DUI:");
 
@@ -1137,40 +1246,40 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         lblCargoEM1.setText("Cargo:");
 
-        javax.swing.GroupLayout pnlDatosEM1Layout = new javax.swing.GroupLayout(pnlDatosEM1);
-        pnlDatosEM1.setLayout(pnlDatosEM1Layout);
-        pnlDatosEM1Layout.setHorizontalGroup(
-            pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlDatosEM1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlDatosCapacitacionesLayout = new javax.swing.GroupLayout(pnlDatosCapacitaciones);
+        pnlDatosCapacitaciones.setLayout(pnlDatosCapacitacionesLayout);
+        pnlDatosCapacitacionesLayout.setHorizontalGroup(
+            pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDatosCapacitacionesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlDatosEM1Layout.createSequentialGroup()
-                        .addGroup(pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlDatosCapacitacionesLayout.createSequentialGroup()
+                        .addGroup(pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblDUIEM1)
                             .addComponent(lblCargoEM1)
                             .addComponent(lblDirEM1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txfDUIEM1, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                             .addComponent(txfDirEM1)
                             .addComponent(txfCargoEM1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblNombreEM1, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblCorreoEM1, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txfCorreoEM1, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
                             .addComponent(txfNombreEM1))
                         .addGap(18, 18, 18)
-                        .addGroup(pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblTelefonoEM1)
                             .addComponent(lblJRVEM1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txfTelefonoEM1, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
                             .addComponent(txfJVEM1)))
-                    .addGroup(pnlDatosEM1Layout.createSequentialGroup()
+                    .addGroup(pnlDatosCapacitacionesLayout.createSequentialGroup()
                         .addComponent(lblCVEM1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txfCVEM2)
@@ -1178,11 +1287,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
                         .addComponent(btnInfoEM1)))
                 .addContainerGap())
         );
-        pnlDatosEM1Layout.setVerticalGroup(
-            pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlDatosEM1Layout.createSequentialGroup()
+        pnlDatosCapacitacionesLayout.setVerticalGroup(
+            pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDatosCapacitacionesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDUIEM1)
                     .addComponent(txfDUIEM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblNombreEM1)
@@ -1190,23 +1299,23 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     .addComponent(lblTelefonoEM1)
                     .addComponent(txfTelefonoEM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDirEM1)
                     .addComponent(txfDirEM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblCorreoEM1)
                     .addComponent(txfCorreoEM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblJRVEM1)
                     .addComponent(txfJVEM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlDatosEM1Layout.createSequentialGroup()
+                .addGroup(pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlDatosCapacitacionesLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txfCVEM2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnInfoEM1))
                         .addGap(16, 16, 16))
-                    .addGroup(pnlDatosEM1Layout.createSequentialGroup()
+                    .addGroup(pnlDatosCapacitacionesLayout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addGroup(pnlDatosEM1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(pnlDatosCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txfCargoEM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblCargoEM1))
                         .addGap(18, 18, 18)
@@ -1214,7 +1323,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                         .addContainerGap(22, Short.MAX_VALUE))))
         );
 
-        tblEM1.setModel(new javax.swing.table.DefaultTableModel(
+        tblCapacitaciones.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1225,12 +1334,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tblEM1.addMouseListener(new java.awt.event.MouseAdapter() {
+        tblCapacitaciones.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tblEM1MouseClicked(evt);
+                tblCapacitacionesMouseClicked(evt);
             }
         });
-        scpnlEM1.setViewportView(tblEM1);
+        scpnlCapacitaciones.setViewportView(tblCapacitaciones);
 
         btnAgregarEM1.setText("Agregar");
 
@@ -1247,10 +1356,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
             .addGroup(pnlCapacitacionesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scpnlEM1, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE)
-                    .addComponent(pnlBuscarTW1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(scpnlCapacitaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE)
+                    .addComponent(pnlBuscarCapacitaciones, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCapacitacionesLayout.createSequentialGroup()
-                        .addComponent(pnlFotoEM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pnlFotoCapacitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(pnlCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlCapacitacionesLayout.createSequentialGroup()
@@ -1262,20 +1371,20 @@ public class FrmPrincipal extends javax.swing.JFrame {
                                 .addComponent(btnGuardarEM1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnImprimirEM1))
-                            .addComponent(pnlDatosEM1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(pnlDatosCapacitaciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         pnlCapacitacionesLayout.setVerticalGroup(
             pnlCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlCapacitacionesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnlBuscarTW1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlBuscarCapacitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlDatosEM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pnlFotoEM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pnlDatosCapacitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlFotoCapacitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(scpnlEM1, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                .addComponent(scpnlCapacitaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlCapacitacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardarEM1)
@@ -2118,9 +2227,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
         getAfiliadoById(Integer.parseInt(tblAfiliados.getValueAt(tblAfiliados.getSelectedRow(),0).toString()));
     }//GEN-LAST:event_tblAfiliadosMouseClicked
 
-    private void tblEM1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblEM1MouseClicked
+    private void tblCapacitacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblCapacitacionesMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_tblEM1MouseClicked
+    }//GEN-LAST:event_tblCapacitacionesMouseClicked
 
     private void tblEM2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblEM2MouseClicked
         // TODO add your handling code here:
@@ -2129,6 +2238,83 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private void tblEM3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblEM3MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_tblEM3MouseClicked
+
+    private void btnAplicarFiltroBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAplicarFiltroBuscarActionPerformed
+        switch (cmbFiltrarDatosBuscar.getSelectedIndex()) {
+            case 0:
+                paramReporteBuscar = txfFiltrarBuscar.getText()+"%";
+                tblDatosBuscar.setModel(llenarTblBuscar("dui", paramReporteBuscar));
+                pathReporteBuscar = this.getClass().getResource("/reportes/general/dui.jasper");
+                parametroReporteBuscar = new HashMap();
+                parametroReporteBuscar.put("dui",paramReporteBuscar);
+                break;
+            case 1:
+                paramReporteBuscar = txfFiltrarBuscar.getText()+"%";
+                tblDatosBuscar.setModel(llenarTblBuscar("nombre", paramReporteBuscar));
+                pathReporteBuscar = this.getClass().getResource("/reportes/general/nombre.jasper");
+                parametroReporteBuscar = new HashMap();
+                parametroReporteBuscar.put("nombre",paramReporteBuscar);
+                break;
+            case 2:
+                paramReporteBuscar = txfFiltrarBuscar.getText()+"%";
+                tblDatosBuscar.setModel(llenarTblBuscar("apellido", paramReporteBuscar));
+                pathReporteBuscar = this.getClass().getResource("/reportes/general/apellido.jasper");
+                parametroReporteBuscar = new HashMap();
+                parametroReporteBuscar.put("apellido",paramReporteBuscar);
+                break;
+            case 3:
+                paramReporteBuscar = txfFiltrarBuscar.getText()+"%";
+                tblDatosBuscar.setModel(llenarTblBuscar("telefono", paramReporteBuscar));
+                pathReporteBuscar = this.getClass().getResource("/reportes/general/telefono.jasper");
+                parametroReporteBuscar = new HashMap();
+                parametroReporteBuscar.put("telefono",paramReporteBuscar);
+                break;
+            case 4:
+                paramReporteBuscar = txfFiltrarBuscar.getText()+"%";
+                tblDatosBuscar.setModel(llenarTblBuscar("direccion", paramReporteBuscar));
+                pathReporteBuscar = this.getClass().getResource("/reportes/general/direccion.jasper");
+                parametroReporteBuscar = new HashMap();
+                parametroReporteBuscar.put("direccion",paramReporteBuscar);
+                break;
+            case 5:
+                paramReporteBuscar = txfFiltrarBuscar.getText()+"%";
+                tblDatosBuscar.setModel(llenarTblBuscar("correo", paramReporteBuscar));
+                pathReporteBuscar = this.getClass().getResource("/reportes/general/correo.jasper");
+                parametroReporteBuscar = new HashMap();
+                parametroReporteBuscar.put("correo",paramReporteBuscar);
+                break;
+            default:
+                paramReporteBuscar = txfFiltrarBuscar.getText()+"%";
+                tblDatosBuscar.setModel(llenarTblBuscar("nivelAcademico.nivelAcademico", paramReporteBuscar));
+                pathReporteBuscar = this.getClass().getResource("/reportes/general/nivelAcademico.jasper");
+                parametroReporteBuscar = new HashMap();
+                parametroReporteBuscar.put("nivelAcademico",paramReporteBuscar);
+                break;
+        }
+    }//GEN-LAST:event_btnAplicarFiltroBuscarActionPerformed
+
+    private void btnImprimirBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirBuscarActionPerformed
+        Conexion con = new Conexion();
+        Connection conn;
+        try{
+            conn = con.conectar();
+            
+            JasperReport reporte = null;
+            
+            reporte = (JasperReport) JRLoader.loadObject(pathReporteBuscar);
+            
+            JasperPrint jprint=JasperFillManager.fillReport(reporte, parametroReporteBuscar, conn);
+            
+            JasperViewer view = new JasperViewer(jprint,false);
+            view.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            view.setVisible(true);
+            
+        } catch (JRException e){
+            e.getMessage();
+        } finally{
+            con.desconectar();
+        }
+    }//GEN-LAST:event_btnImprimirBuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2175,8 +2361,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnAplicarFiltroBuscar;
     private javax.swing.JButton btnAplicarFiltroFacturacion;
     private javax.swing.JButton btnBuscarAfiliados;
+    private javax.swing.JButton btnBuscarCapacitaciones;
     private javax.swing.JButton btnBuscarEM;
-    private javax.swing.JButton btnBuscarEM1;
     private javax.swing.JButton btnBuscarEM2;
     private javax.swing.JButton btnBuscarEM3;
     private javax.swing.JButton btnCargoCom;
@@ -2211,7 +2397,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnInfoEM3;
     private javax.swing.JButton btnJRV;
     private javax.swing.JButton btnLimpiarFiltroFacturacion;
-    private javax.swing.JButton btnLimpiarFiltrosBuscar;
     private javax.swing.JButton btnMunicipios;
     private javax.swing.JButton btnNivelesAcad;
     private javax.swing.JButton btnNuevaFactura;
@@ -2219,9 +2404,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnSalirBuscar;
     private javax.swing.JButton btnSalirFacturacion;
     private javax.swing.JComboBox<String> cmbFiltrarAfiliados;
+    private javax.swing.JComboBox<String> cmbFiltrarCapacitaciones;
     private javax.swing.JComboBox<String> cmbFiltrarDatosBuscar;
     private javax.swing.JComboBox<String> cmbFiltrarEM;
-    private javax.swing.JComboBox<String> cmbFiltrarEM1;
     private javax.swing.JComboBox<String> cmbFiltrarEM2;
     private javax.swing.JComboBox<String> cmbFiltrarEM3;
     private javax.swing.JComboBox<String> cmbFiltrarFacturacion;
@@ -2253,8 +2438,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lblDonacionesAfiliados;
     private javax.swing.JLabel lblFacebookAfiliados;
     private javax.swing.JLabel lblFiltrarAfiliados;
+    private javax.swing.JLabel lblFiltrarCapacitaciones;
     private javax.swing.JLabel lblFiltrarEM;
-    private javax.swing.JLabel lblFiltrarEM1;
     private javax.swing.JLabel lblFiltrarEM2;
     private javax.swing.JLabel lblFiltrarEM3;
     private javax.swing.JLabel lblFiltrosAplicadosBuscar;
@@ -2262,8 +2447,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lblFiltrosBuscar;
     private javax.swing.JLabel lblFiltrosFacturacion;
     private javax.swing.JLabel lblFotoAfiliados;
+    private javax.swing.JLabel lblFotoCapacitaciones;
     private javax.swing.JLabel lblFotoEM;
-    private javax.swing.JLabel lblFotoEM2;
     private javax.swing.JLabel lblFotoEM3;
     private javax.swing.JLabel lblFotoEM4;
     private javax.swing.JLabel lblJRVEM;
@@ -2291,8 +2476,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel pnlAfiliados;
     private javax.swing.JPanel pnlBuscar;
     private javax.swing.JPanel pnlBuscarAfiliado;
+    private javax.swing.JPanel pnlBuscarCapacitaciones;
     private javax.swing.JPanel pnlBuscarTW;
-    private javax.swing.JPanel pnlBuscarTW1;
     private javax.swing.JPanel pnlBuscarTW2;
     private javax.swing.JPanel pnlBuscarTW3;
     private javax.swing.JPanel pnlCapacitaciones;
@@ -2302,8 +2487,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel pnlControlFacturacion;
     private javax.swing.JPanel pnlCuadroElectoral;
     private javax.swing.JPanel pnlDatosAfiliados;
+    private javax.swing.JPanel pnlDatosCapacitaciones;
     private javax.swing.JPanel pnlDatosEM;
-    private javax.swing.JPanel pnlDatosEM1;
     private javax.swing.JPanel pnlDatosEM2;
     private javax.swing.JPanel pnlDatosEM3;
     private javax.swing.JPanel pnlDescripcion;
@@ -2312,24 +2497,24 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel pnlFiltrarDatosBuscar;
     private javax.swing.JPanel pnlFiltrarDatosFacturacion;
     private javax.swing.JPanel pnlFotoAfiliados;
+    private javax.swing.JPanel pnlFotoCapacitaciones;
     private javax.swing.JPanel pnlFotoEM;
-    private javax.swing.JPanel pnlFotoEM1;
     private javax.swing.JPanel pnlFotoEM2;
     private javax.swing.JPanel pnlFotoEM3;
     private javax.swing.JPanel pnlVisitas;
     private javax.swing.JPanel pnlVotaciones;
     private javax.swing.JScrollPane scpnlAfiliados;
+    private javax.swing.JScrollPane scpnlCapacitaciones;
     private javax.swing.JScrollPane scpnlDatosBuscar;
     private javax.swing.JScrollPane scpnlDatosFacturacion;
     private javax.swing.JScrollPane scpnlEM;
-    private javax.swing.JScrollPane scpnlEM1;
     private javax.swing.JScrollPane scpnlEM2;
     private javax.swing.JScrollPane scpnlEM3;
     private javax.swing.JTable tblAfiliados;
+    private javax.swing.JTable tblCapacitaciones;
     private javax.swing.JTable tblDatosBuscar;
     private javax.swing.JTable tblDatosFacturacion;
     private javax.swing.JTable tblEM;
-    private javax.swing.JTable tblEM1;
     private javax.swing.JTable tblEM2;
     private javax.swing.JTable tblEM3;
     private javax.swing.JTabbedPane tbpPrincipal;
@@ -2360,8 +2545,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField txfFacebookAfiliados;
     private javax.swing.JTextField txfFiltrarAfiliados;
     private javax.swing.JTextField txfFiltrarBuscar;
+    private javax.swing.JTextField txfFiltrarCapacitaciones;
     private javax.swing.JTextField txfFiltrarEM;
-    private javax.swing.JTextField txfFiltrarEM1;
     private javax.swing.JTextField txfFiltrarEM2;
     private javax.swing.JTextField txfFiltrarEM3;
     private javax.swing.JTextField txfFiltrarFacturacion;
